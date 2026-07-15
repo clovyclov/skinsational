@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Your Visit | Skinsational Aesthetics</title>
+    <meta name="description" content="Select a date and time for your in-person skin assessment.">
+    <meta name="robots" content="noindex">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Compiled Theme Stylesheet (Tailwind utility system) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen bg-background text-foreground font-sans font-light selection:bg-primary/30 selection:text-primary-foreground">
+    <!-- Custom Noise Background Overlay -->
+    <div class="absolute inset-0 opacity-[0.03] bg-noise mix-blend-overlay pointer-events-none z-50"></div>
+
+    <div class="min-h-screen bg-background text-foreground py-12 md:py-20 px-[5%] relative overflow-hidden flex flex-col justify-between">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(201,169,110,0.05)_0%,transparent_50%)] pointer-events-none"></div>
+
+        <div class="max-w-[1000px] mx-auto w-full relative z-10 flex-grow">
+            <!-- Back to Home Link -->
+            <a href="index.html" class="inline-flex items-center gap-2 text-[0.85rem] font-medium tracking-[0.05em] uppercase text-muted-foreground hover:text-primary mb-12 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                <span>Back to Home</span>
+            </a>
+
+            <!-- Header -->
+            <div class="text-center mb-10">
+                <p class="text-[0.72rem] tracking-[0.28em] uppercase text-primary mb-4">Step 2 of 2</p>
+                <h1 class="font-serif text-[clamp(2.5rem,5vw,3.5rem)] text-foreground mb-4 leading-tight">Schedule Your Visit</h1>
+                <p class="text-[1.1rem] text-muted-foreground max-w-[500px] mx-auto">Select a date and time for your in-person skin assessment.</p>
+            </div>
+
+            <!-- Widget IFrame Card -->
+            <div class="bg-card border border-primary/10 rounded-xl p-2 md:p-4 shadow-2xl overflow-hidden min-h-[800px]">
+                <iframe 
+                    src="https://link.aestheticrecord.com/widget/booking/tK1YNWGbh71xWYb7T5WA" 
+                    style="width: 100%; border: none; overflow: hidden; min-height: 800px;" 
+                    scrolling="no" 
+                    id="kEsCV7WFeIcZNaHIZUgx_1776716117821">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-20 border-t border-white/5 pt-8 text-center max-w-[1000px] mx-auto w-full">
+            <div class="text-[0.9rem] text-muted-foreground tracking-[0.05em]">&copy; <span id="current-year">2026</span> Skinsational Aesthetics. All rights reserved.</div>
+        </footer>
+    </div>
+
+    <!-- Aesthetic Record Form Embed Script -->
+    <script src="https://link.aestheticrecord.com/js/form_embed.js" type="text/javascript"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    <!-- Custom Scroll Reveal logic -->
+    <script src="app.js"></script>
+</body>
+</html>
