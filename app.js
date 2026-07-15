@@ -267,6 +267,8 @@ function initFormHandler() {
         const first_name = fullNameVal.split(" ")[0];
         const last_name = fullNameVal.split(" ").slice(1).join(" ") || undefined;
 
+        const treatment = form.getAttribute('data-treatment') || 'Microneedling Assessment';
+
         const webhookPayload = {
             fullName: fullNameVal,
             first_name: first_name,
@@ -276,6 +278,7 @@ function initFormHandler() {
             biggestConcern: concernEl.value.trim(),
             specificChanges: changesEl.value.trim(),
             pastTreatments: treatmentsEl.value.trim(),
+            treatment: treatment,
             submittedAt: new Date().toISOString(),
             url: window.location.href,
             device: /Mobile|Android|iPhone/i.test(navigator.userAgent) ? "mobile" : "desktop"
