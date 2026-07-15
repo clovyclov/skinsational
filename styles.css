@@ -29,27 +29,53 @@
 /* Lightbox Navigation Buttons */
 .lightbox-prev-btn,
 .lightbox-next-btn {
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    position: fixed !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
     color: var(--foreground) !important;
-    border-radius: 50%;
-    width: 3.5rem;
-    height: 3.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.3s, opacity 0.3s, border-color 0.3s;
-    user-select: none;
+    border-radius: 50% !important;
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s, opacity 0.3s, border-color 0.3s !important;
+    user-select: none !important;
+    z-index: 1010 !important;
+}
+.lightbox-prev-btn {
+    left: 1.5rem !important;
+}
+.lightbox-next-btn {
+    right: 1.5rem !important;
+}
+@media (min-width: 768px) {
+    .lightbox-prev-btn {
+        left: 2.5rem !important;
+    }
+    .lightbox-next-btn {
+        right: 2.5rem !important;
+    }
 }
 .lightbox-prev-btn:hover,
 .lightbox-next-btn:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-    border-color: var(--primary);
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    border-color: var(--primary) !important;
     color: var(--primary) !important;
 }
 .lightbox-prev-btn svg,
 .lightbox-next-btn svg {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.5rem !important;
+    height: 1.5rem !important;
 }
+.lightbox-close-btn {
+    position: fixed !important;
+    top: 1.5rem !important;
+    right: 1.75rem !important;
+    z-index: 1010 !important;
+}
+
+
