@@ -560,28 +560,23 @@
                                     <span class="text-sm font-medium text-destructive form-error" style="display: none;"></span>
                                 </div>
 
-                                <!-- Biggest Concern -->
+                                <!-- Primary Concern Dropdown -->
                                 <div class="flex flex-col space-y-2 form-group">
-                                    <label for="biggestConcern" class="text-[1.05rem] text-foreground leading-relaxed font-medium">What's your biggest concern with your skin or wellness right now? <span class="text-destructive">*</span></label>
-                                    <input type="text" id="biggestConcern" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-background border-input h-11">
+                                    <label for="landingConcern" class="text-[1.05rem] text-foreground font-medium">What is your primary area of concern? <span class="text-destructive">*</span></label>
+                                    <select id="landingConcern" class="flex h-11 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-background border-input">
+                                        <option value="" disabled selected>Select your area of concern...</option>
+                                        <option value="Botox & Wrinkle Relaxers">Botox & Wrinkle Relaxers</option>
+                                        <option value="Clinical Microneedling">Clinical Microneedling (Acne Scarring & Texture)</option>
+                                        <option value="Clinical Skin Facials">Clinical Skin Facials (Rejuvenation & Glow)</option>
+                                        <option value="IV Hydration Therapy">IV Hydration & Wellness Infusions</option>
+                                        <option value="Medical Weight Loss">Medically Supervised Weight Loss</option>
+                                        <option value="Scalp & Hair Restoration">Advanced Scalp & Hair Restoration</option>
+                                        <option value="General Beauty & Wellness Consultation">General Consultation / Other</option>
+                                    </select>
                                     <span class="text-sm font-medium text-destructive form-error" style="display: none;"></span>
                                 </div>
 
-                                <!-- Specific Changes -->
-                                <div class="flex flex-col space-y-2 form-group">
-                                    <label for="specificChanges" class="text-[1.05rem] text-foreground leading-relaxed font-medium">Have you noticed any specific changes recently (fine lines, volume loss, stubborn fat, hair thinning)? <span class="text-destructive">*</span></label>
-                                    <input type="text" id="specificChanges" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-background border-input h-11">
-                                    <span class="text-sm font-medium text-destructive form-error" style="display: none;"></span>
-                                </div>
-
-                                <!-- Past Treatments -->
-                                <div class="flex flex-col space-y-2 form-group">
-                                    <label for="pastTreatments" class="text-[1.05rem] text-foreground leading-relaxed font-medium">Have you tried any skincare treatments or weight loss programs in the past? What were the results? <span class="text-destructive">*</span></label>
-                                    <input type="text" id="pastTreatments" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-background border-input h-11">
-                                    <span class="text-sm font-medium text-destructive form-error" style="display: none;"></span>
-                                </div>
-
-                                <button type="submit" class="w-full h-14 text-[0.85rem] tracking-[0.12em] uppercase font-medium mt-6 hover:-translate-y-[1px] transition-transform bg-primary text-primary-foreground hover:bg-primary/90 flex items-center justify-center cursor-pointer rounded-md form-submit-btn">Submit Assessment</button>
+                                <button type="submit" class="w-full h-14 text-[0.85rem] tracking-[0.12em] uppercase font-medium mt-6 hover:-translate-y-[1px] transition-transform bg-primary text-primary-foreground hover:bg-primary/90 flex items-center justify-center cursor-pointer rounded-md form-submit-btn">Submit Request</button>
                             </form>
                         </div>
                     </div>
