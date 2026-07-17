@@ -36,6 +36,27 @@
 
     <!-- Compiled Theme Stylesheet (Tailwind utility system) -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Custom Style Overrides (Bypass browser caching of styles.css) -->
+    <style>
+        .hero-title {
+            font-size: clamp(3rem, 7vw, 5.5rem) !important;
+            line-height: 1.05 !important;
+            font-weight: 300 !important;
+        }
+        .brand-logo-img {
+            max-height: 2.2rem !important;
+            width: auto !important;
+            object-fit: contain !important;
+            filter: brightness(1.2) grayscale(1) !important;
+            opacity: 0.5 !important;
+            transition: all 0.3s ease !important;
+        }
+        .brand-logo-img:hover {
+            filter: brightness(1) grayscale(0) !important;
+            opacity: 0.95 !important;
+        }
+    </style>
 </head>
 <body class="min-h-screen bg-background text-foreground font-sans font-light selection:bg-primary/30 selection:text-primary-foreground">
     <!-- Custom Noise Background Overlay -->
