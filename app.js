@@ -284,7 +284,7 @@ function initFormHandler() {
             device: /Mobile|Android|iPhone/i.test(navigator.userAgent) ? "mobile" : "desktop"
         };
 
-        const webhookUrl = "https://services.leadconnectorhq.com/hooks/uhpMfULsXkINzahojYbf/webhook-trigger/0aa4786b-1720-4be3-b7b2-6a5f605508df";
+        const webhookUrl = "https://services.leadconnectorhq.com/hooks/LzRCA738bEnveuYSWsyR/webhook-trigger/DL8qk4icQCuFBraVxclL";
 
         try {
             const response = await fetch(webhookUrl, {
