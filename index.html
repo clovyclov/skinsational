@@ -56,6 +56,18 @@
             filter: brightness(1) grayscale(0) !important;
             opacity: 0.95 !important;
         }
+        .premium-card {
+            padding: 2.5rem !important;
+        }
+        .premium-icon-wrapper {
+            width: 3rem !important;
+            height: 3rem !important;
+            flex-shrink: 0 !important;
+        }
+        .footer-nav-links {
+            display: flex !important;
+            gap: 1.5rem !important;
+        }
     </style>
 </head>
 <body class="min-h-screen bg-background text-foreground font-sans font-light selection:bg-primary/30 selection:text-primary-foreground">
@@ -358,9 +370,9 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
                     <!-- Card 1: Memberships -->
-                    <div class="bg-card border border-primary/10 p-10 rounded-lg flex flex-col justify-between hover:border-primary/40 transition-colors reveal">
+                    <div class="premium-card bg-card border border-primary/10 rounded-lg flex flex-col justify-between hover:border-primary/40 transition-colors reveal">
                         <div>
-                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
+                            <div class="premium-icon-wrapper rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                                 </svg>
@@ -372,9 +384,9 @@
                     </div>
 
                     <!-- Card 2: Savings Packages -->
-                    <div class="bg-card border border-primary/10 p-10 rounded-lg flex flex-col justify-between hover:border-primary/40 transition-colors reveal reveal-delay-1">
+                    <div class="premium-card bg-card border border-primary/10 rounded-lg flex flex-col justify-between hover:border-primary/40 transition-colors reveal reveal-delay-1">
                         <div>
-                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
+                            <div class="premium-icon-wrapper rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                     <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
                                 </svg>
@@ -386,9 +398,9 @@
                     </div>
 
                     <!-- Card 3: Gift Cards -->
-                    <div class="bg-card border border-primary/10 p-10 rounded-lg flex flex-col justify-between hover:border-primary/40 transition-colors reveal reveal-delay-2">
+                    <div class="premium-card bg-card border border-primary/10 rounded-lg flex flex-col justify-between hover:border-primary/40 transition-colors reveal reveal-delay-2">
                         <div>
-                            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
+                            <div class="premium-icon-wrapper rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                     <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
                                     <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path>
@@ -602,7 +614,7 @@
                 <!-- Col 2: Services Quick Links -->
                 <div>
                     <h4 class="font-serif text-[1.2rem] text-primary tracking-wider uppercase mb-5">Our Services</h4>
-                    <ul class="space-y-2.5 text-[0.95rem] text-muted-foreground">
+                    <ul class="space-y-2 text-[0.95rem] text-muted-foreground">
                         <li><a href="botox.html" class="hover:text-primary transition-colors">Botox Injections & Dysport</a></li>
                         <li><a href="microneedling.html" class="hover:text-primary transition-colors">Clinical Microneedling</a></li>
                         <li><a href="#services" class="hover:text-primary transition-colors">Medically Supervised Weight Loss</a></li>
@@ -630,7 +642,7 @@
 
             <div class="border-t border-white/5 pt-8 text-center flex flex-col md:flex-row items-center justify-between gap-4 max-w-[1200px] mx-auto">
                 <div class="text-[0.9rem] text-muted-foreground tracking-[0.05em]">&copy; <span id="current-year">2026</span> Skinsational Aesthetics. All rights reserved.</div>
-                <div class="flex gap-6 text-[0.85rem] text-muted-foreground">
+                <div class="footer-nav-links text-[0.85rem] text-muted-foreground">
                     <a href="index.html" class="hover:text-primary transition-colors">Home</a>
                     <a href="botox.html" class="hover:text-primary transition-colors">Botox</a>
                     <a href="microneedling.html" class="hover:text-primary transition-colors">Microneedling</a>
