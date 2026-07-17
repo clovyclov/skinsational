@@ -291,7 +291,7 @@ function initFormHandler() {
         if (concernEl) webhookPayload.biggestConcern = concernEl.value.trim();
         if (changesEl) webhookPayload.specificChanges = changesEl.value.trim();
         if (treatmentsEl) webhookPayload.pastTreatments = treatmentsEl.value.trim();
-        if (landingConcernEl) webhookPayload.biggestConcern = "Landing Page Concern: " + landingConcernEl.value;
+        if (landingConcernEl) webhookPayload.biggestConcern = landingConcernEl.value.trim();
         if (formTypeEl) webhookPayload.formType = formTypeEl.value.trim();
 
         const webhookUrl = "https://services.leadconnectorhq.com/hooks/LzRCA738bEnveuYSWsyR/webhook-trigger/DL8qk4icQCuFBraVxclL";
