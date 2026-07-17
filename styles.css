@@ -78,4 +78,25 @@
     z-index: 1010 !important;
 }
 
+/* Custom Hero Headline Override */
+.hero-title {
+    font-size: clamp(3rem, 7vw, 5.5rem) !important;
+    line-height: 1.05 !important;
+    font-weight: 300 !important;
+}
+
+/* Brand Logos Hover Animation */
+.brand-logo-img {
+    max-height: 2.2rem !important;
+    width: auto !important;
+    object-fit: contain !important;
+    filter: brightness(1.2) grayscale(1) !important;
+    opacity: 0.5 !important;
+    transition: all 0.3s ease !important;
+}
+.brand-logo-img:hover {
+    filter: brightness(1) grayscale(0) !important;
+    opacity: 0.95 !important;
+}
+
 
