@@ -257,7 +257,7 @@ function initFormHandler() {
 
         // Landing Page Dropdown Validation
         if (landingConcernEl && !landingConcernEl.value) {
-            showError(landingConcernEl, "Please select your primary skin concern.");
+            showError(landingConcernEl, "Please select your primary concern.");
         }
 
         if (hasError) return;
