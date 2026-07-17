@@ -206,6 +206,7 @@ function initFormHandler() {
         const concernEl = document.getElementById('biggestConcern');
         const changesEl = document.getElementById('specificChanges');
         const treatmentsEl = document.getElementById('pastTreatments');
+        const landingConcernEl = document.getElementById('landingConcern');
 
         let hasError = false;
 
@@ -239,19 +240,24 @@ function initFormHandler() {
             showError(phoneEl, "Please enter a valid phone number (at least 10 digits).");
         }
 
-        // Biggest Concern Validation
-        if (!concernEl.value || concernEl.value.trim().length < 2) {
+        // Biggest Concern Validation (Full Form)
+        if (concernEl && (!concernEl.value || concernEl.value.trim().length < 2)) {
             showError(concernEl, "This field is required.");
         }
 
-        // Specific Changes Validation
-        if (!changesEl.value || changesEl.value.trim().length < 2) {
+        // Specific Changes Validation (Full Form)
+        if (changesEl && (!changesEl.value || changesEl.value.trim().length < 2)) {
             showError(changesEl, "This field is required.");
         }
 
-        // Past Treatments Validation
-        if (!treatmentsEl.value || treatmentsEl.value.trim().length < 2) {
+        // Past Treatments Validation (Full Form)
+        if (treatmentsEl && (!treatmentsEl.value || treatmentsEl.value.trim().length < 2)) {
             showError(treatmentsEl, "This field is required.");
+        }
+
+        // Landing Page Dropdown Validation
+        if (landingConcernEl && !landingConcernEl.value) {
+            showError(landingConcernEl, "Please select your primary skin concern.");
         }
 
         if (hasError) return;
@@ -275,14 +281,16 @@ function initFormHandler() {
             last_name: last_name,
             email: emailEl.value.trim(),
             phone: phoneEl.value.trim(),
-            biggestConcern: concernEl.value.trim(),
-            specificChanges: changesEl.value.trim(),
-            pastTreatments: treatmentsEl.value.trim(),
             treatment: treatment,
             submittedAt: new Date().toISOString(),
             url: window.location.href,
             device: /Mobile|Android|iPhone/i.test(navigator.userAgent) ? "mobile" : "desktop"
         };
+
+        if (concernEl) webhookPayload.biggestConcern = concernEl.value.trim();
+        if (changesEl) webhookPayload.specificChanges = changesEl.value.trim();
+        if (treatmentsEl) webhookPayload.pastTreatments = treatmentsEl.value.trim();
+        if (landingConcernEl) webhookPayload.biggestConcern = "Landing Page Concern: " + landingConcernEl.value;
 
         const webhookUrl = "https://services.leadconnectorhq.com/hooks/LzRCA738bEnveuYSWsyR/webhook-trigger/DL8qk4icQCuFBraVxclL";
 
