@@ -307,7 +307,7 @@ function initFormHandler() {
             console.error("Webhook submission failed, redirecting anyway to maintain flow:", error);
         }
 
-        // Always redirect to book.html after submission
-        window.location.href = "book.html";
+        // Always redirect to book after submission
+        window.location.href = "book";
     });
 }
