@@ -12,7 +12,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Initialize Webhook Form submission
     initFormHandler();
+
+    // 5. Initialize FAQ Accordion
+    initFAQAccordion();
 });
+
+/* --- FAQ Accordion Logic --- */
+function initFAQAccordion() {
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    faqToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const item = toggle.closest('.faq-item');
+            const content = item.querySelector('.faq-content');
+            const icon = toggle.querySelector('.faq-icon');
+            
+            const isOpen = !content.classList.contains('hidden');
+            
+            // Close other items
+            document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+            document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('rotate-180', 'bg-primary/20'));
+            
+            if (!isOpen) {
+                content.classList.remove('hidden');
+                if (icon) icon.classList.add('rotate-180', 'bg-primary/20');
+            }
+        });
+    });
+}
 
 /* --- Scroll Reveal --- */
 function initScrollReveal() {

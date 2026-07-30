@@ -649,7 +649,7 @@
             <div class="section-divider"></div>
 
             <!-- FAQ Section -->
-            <section id="faq" class="py-24 md:py-36 px-[5%] bg-[#16120e] relative overflow-hidden border-y border-primary/15">
+            <section id="faq" class="py-24 md:py-36 px-[5%] bg-[#14100c] relative overflow-hidden border-t border-primary/20 mb-20">
                 <div class="max-w-[850px] mx-auto relative z-10">
                     <div class="text-center mb-16">
                         <p class="text-[0.75rem] tracking-[0.28em] uppercase text-primary mb-3 font-semibold reveal">Got Questions?</p>
@@ -659,74 +659,82 @@
 
                     <div class="space-y-6">
                         <!-- FAQ Item 1 -->
-                        <details class="group bg-[#231e17] border border-primary/25 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/60 hover:bg-[#28221a] reveal shadow-lg">
-                            <summary class="flex justify-between items-center p-6 md:p-8 cursor-pointer list-none select-none font-serif text-[1.2rem] md:text-[1.3rem] text-[#f5eedc] font-medium hover:text-primary transition-colors">
+                        <div class="faq-item bg-[#231e17] border border-primary/25 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/50 reveal shadow-xl">
+                            <button type="button" class="faq-toggle w-full flex justify-between items-center p-6 md:p-8 text-left cursor-pointer font-serif text-[1.2rem] md:text-[1.35rem] text-[#f5eedc] font-medium hover:text-primary transition-colors focus:outline-none">
                                 <span class="pr-4">How long does an IV hydration treatment take?</span>
-                                <span class="w-9 h-9 rounded-full border border-primary/30 flex items-center justify-center text-primary shrink-0 group-open:rotate-180 group-open:bg-primary/20 transition-all duration-300">
+                                <span class="faq-icon w-9 h-9 rounded-full border border-primary/30 flex items-center justify-center text-primary shrink-0 transition-transform duration-300">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
                                 </span>
-                            </summary>
-                            <div class="px-6 pb-8 pt-5 md:px-8 md:pb-8 md:pt-6 text-[1.05rem] text-[#e3d7c5] leading-[1.8] border-t border-primary/15 bg-[#1b1712]">
-                                Most IV hydration treatments take approximately 45 to 60 minutes, depending on the selected IV therapy and your individual wellness needs.
+                            </button>
+                            <div class="faq-content hidden border-t border-primary/15 bg-[#1a1611]">
+                                <p class="px-6 py-7 md:px-8 md:py-8 text-[1.05rem] text-[#e3d7c5] leading-[1.85]">
+                                    Most IV hydration treatments take approximately 45 to 60 minutes, depending on the selected IV therapy and your individual wellness needs.
+                                </p>
                             </div>
-                        </details>
+                        </div>
 
                         <!-- FAQ Item 2 -->
-                        <details class="group bg-[#231e17] border border-primary/25 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/60 hover:bg-[#28221a] reveal reveal-delay-1 shadow-lg">
-                            <summary class="flex justify-between items-center p-6 md:p-8 cursor-pointer list-none select-none font-serif text-[1.2rem] md:text-[1.3rem] text-[#f5eedc] font-medium hover:text-primary transition-colors">
+                        <div class="faq-item bg-[#231e17] border border-primary/25 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/50 reveal reveal-delay-1 shadow-xl">
+                            <button type="button" class="faq-toggle w-full flex justify-between items-center p-6 md:p-8 text-left cursor-pointer font-serif text-[1.2rem] md:text-[1.35rem] text-[#f5eedc] font-medium hover:text-primary transition-colors focus:outline-none">
                                 <span class="pr-4">How often should I receive IV therapy?</span>
-                                <span class="w-9 h-9 rounded-full border border-primary/30 flex items-center justify-center text-primary shrink-0 group-open:rotate-180 group-open:bg-primary/20 transition-all duration-300">
+                                <span class="faq-icon w-9 h-9 rounded-full border border-primary/30 flex items-center justify-center text-primary shrink-0 transition-transform duration-300">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
                                 </span>
-                            </summary>
-                            <div class="px-6 pb-8 pt-5 md:px-8 md:pb-8 md:pt-6 text-[1.05rem] text-[#e3d7c5] leading-[1.8] border-t border-primary/15 bg-[#1b1712]">
-                                Treatment frequency varies based on your goals. Some clients receive IV therapy occasionally for hydration and recovery, while others incorporate regular treatments into their wellness routine. Our medical team will help recommend a schedule that best fits your needs.
+                            </button>
+                            <div class="faq-content hidden border-t border-primary/15 bg-[#1a1611]">
+                                <p class="px-6 py-7 md:px-8 md:py-8 text-[1.05rem] text-[#e3d7c5] leading-[1.85]">
+                                    Treatment frequency varies based on your goals. Some clients receive IV therapy occasionally for hydration and recovery, while others incorporate regular treatments into their wellness routine. Our medical team will help recommend a schedule that best fits your needs.
+                                </p>
                             </div>
-                        </details>
+                        </div>
 
                         <!-- FAQ Item 3 -->
-                        <details class="group bg-[#231e17] border border-primary/25 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/60 hover:bg-[#28221a] reveal reveal-delay-2 shadow-lg">
-                            <summary class="flex justify-between items-center p-6 md:p-8 cursor-pointer list-none select-none font-serif text-[1.2rem] md:text-[1.3rem] text-[#f5eedc] font-medium hover:text-primary transition-colors">
+                        <div class="faq-item bg-[#231e17] border border-primary/25 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/50 reveal reveal-delay-2 shadow-xl">
+                            <button type="button" class="faq-toggle w-full flex justify-between items-center p-6 md:p-8 text-left cursor-pointer font-serif text-[1.2rem] md:text-[1.35rem] text-[#f5eedc] font-medium hover:text-primary transition-colors focus:outline-none">
                                 <span class="pr-4">Is IV hydration therapy safe?</span>
-                                <span class="w-9 h-9 rounded-full border border-primary/30 flex items-center justify-center text-primary shrink-0 group-open:rotate-180 group-open:bg-primary/20 transition-all duration-300">
+                                <span class="faq-icon w-9 h-9 rounded-full border border-primary/30 flex items-center justify-center text-primary shrink-0 transition-transform duration-300">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
                                 </span>
-                            </summary>
-                            <div class="px-6 pb-8 pt-5 md:px-8 md:pb-8 md:pt-6 text-[1.05rem] text-[#e3d7c5] leading-[1.8] border-t border-primary/15 bg-[#1b1712]">
-                                IV hydration therapy is generally well tolerated when administered by our qualified medical professionals. Before treatment, every client completes a medical history and is evaluated to determine whether IV therapy is appropriate for them.
+                            </button>
+                            <div class="faq-content hidden border-t border-primary/15 bg-[#1a1611]">
+                                <p class="px-6 py-7 md:px-8 md:py-8 text-[1.05rem] text-[#e3d7c5] leading-[1.85]">
+                                    IV hydration therapy is generally well tolerated when administered by our qualified medical professionals. Before treatment, every client completes a medical history and is evaluated to determine whether IV therapy is appropriate for them.
+                                </p>
                             </div>
-                        </details>
+                        </div>
 
                         <!-- FAQ Item 4 -->
-                        <details class="group bg-[#231e17] border border-primary/25 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/60 hover:bg-[#28221a] reveal reveal-delay-3 shadow-lg">
-                            <summary class="flex justify-between items-center p-6 md:p-8 cursor-pointer list-none select-none font-serif text-[1.2rem] md:text-[1.3rem] text-[#f5eedc] font-medium hover:text-primary transition-colors">
+                        <div class="faq-item bg-[#231e17] border border-primary/25 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/50 reveal reveal-delay-3 shadow-xl">
+                            <button type="button" class="faq-toggle w-full flex justify-between items-center p-6 md:p-8 text-left cursor-pointer font-serif text-[1.2rem] md:text-[1.35rem] text-[#f5eedc] font-medium hover:text-primary transition-colors focus:outline-none">
                                 <span class="pr-4">What are the benefits of IV therapy?</span>
-                                <span class="w-9 h-9 rounded-full border border-primary/30 flex items-center justify-center text-primary shrink-0 group-open:rotate-180 group-open:bg-primary/20 transition-all duration-300">
+                                <span class="faq-icon w-9 h-9 rounded-full border border-primary/30 flex items-center justify-center text-primary shrink-0 transition-transform duration-300">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
                                 </span>
-                            </summary>
-                            <div class="px-6 pb-8 pt-5 md:px-8 md:pb-8 md:pt-6 text-[1.05rem] text-[#e3d7c5] leading-[1.8] border-t border-primary/15 bg-[#1b1712]">
-                                IV therapy may help support hydration, energy production, immune health, athletic recovery, healthy aging, skin health, and overall wellness by delivering fluids, vitamins, minerals, and nutrients directly into the bloodstream.
+                            </button>
+                            <div class="faq-content hidden border-t border-primary/15 bg-[#1a1611]">
+                                <p class="px-6 py-7 md:px-8 md:py-8 text-[1.05rem] text-[#e3d7c5] leading-[1.85]">
+                                    IV therapy may help support hydration, energy production, immune health, athletic recovery, healthy aging, skin health, and overall wellness by delivering fluids, vitamins, minerals, and nutrients directly into the bloodstream.
+                                </p>
                             </div>
-                        </details>
+                        </div>
 
                         <!-- FAQ Item 5 -->
-                        <details class="group bg-[#231e17] border border-primary/25 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/60 hover:bg-[#28221a] reveal reveal-delay-4 shadow-lg">
-                            <summary class="flex justify-between items-center p-6 md:p-8 cursor-pointer list-none select-none font-serif text-[1.2rem] md:text-[1.3rem] text-[#f5eedc] font-medium hover:text-primary transition-colors">
+                        <div class="faq-item bg-[#231e17] border border-primary/25 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/50 reveal reveal-delay-4 shadow-xl">
+                            <button type="button" class="faq-toggle w-full flex justify-between items-center p-6 md:p-8 text-left cursor-pointer font-serif text-[1.2rem] md:text-[1.35rem] text-[#f5eedc] font-medium hover:text-primary transition-colors focus:outline-none">
                                 <span class="pr-4">Who is a candidate for IV therapy?</span>
-                                <span class="w-9 h-9 rounded-full border border-primary/30 flex items-center justify-center text-primary shrink-0 group-open:rotate-180 group-open:bg-primary/20 transition-all duration-300">
+                                <span class="faq-icon w-9 h-9 rounded-full border border-primary/30 flex items-center justify-center text-primary shrink-0 transition-transform duration-300">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
                                 </span>
-                            </summary>
-                            <div class="px-6 pb-8 pt-5 md:px-8 md:pb-8 md:pt-6 text-[1.05rem] text-[#e3d7c5] leading-[1.8] border-t border-primary/15 bg-[#1b1712]">
-                                Many healthy adults looking to support hydration and overall wellness may be candidates for IV therapy. Your provider will review your medical history to determine which treatment is most appropriate for you.
+                            </button>
+                            <div class="faq-content hidden border-t border-primary/15 bg-[#1a1611]">
+                                <p class="px-6 py-7 md:px-8 md:py-8 text-[1.05rem] text-[#e3d7c5] leading-[1.85]">
+                                    Many healthy adults looking to support hydration and overall wellness may be candidates for IV therapy. Your provider will review your medical history to determine which treatment is most appropriate for you.
+                                </p>
                             </div>
-                        </details>
+                        </div>
                     </div>
                 </div>
             </section>
-            
-            <div class="section-divider"></div>
 
         </main>
 
