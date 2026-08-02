@@ -100,3 +100,84 @@
 }
 
 
+
+
+/* --- FAQ Section & Accordion Styles --- */
+#faq {
+    padding-top: 100px !important;
+    padding-bottom: 120px !important;
+    margin-top: 40px !important;
+    margin-bottom: 80px !important;
+    background-color: #14100c !important;
+    border-top: 1px solid rgba(201, 169, 110, 0.2) !important;
+    border-bottom: 1px solid rgba(201, 169, 110, 0.2) !important;
+}
+
+.faq-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+}
+
+.faq-item {
+    background-color: #231e17 !important;
+    border: 1px solid rgba(201, 169, 110, 0.25) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+}
+
+.faq-item:hover {
+    border-color: rgba(201, 169, 110, 0.6) !important;
+    background-color: #28221a !important;
+}
+
+.faq-toggle {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 24px 28px !important;
+    text-align: left !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    color: #f5eedc !important;
+    font-family: Cormorant Garamond, serif !important;
+    font-size: 1.3rem !important;
+    font-weight: 500 !important;
+    transition: color 0.3s ease !important;
+}
+
+.faq-toggle:hover {
+    color: hsl(39, 45%, 61%) !important;
+}
+
+.faq-icon {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    border: 1px solid rgba(201, 169, 110, 0.3) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: hsl(39, 45%, 61%) !important;
+    flex-shrink: 0 !important;
+    transition: transform 0.3s ease, background-color 0.3s ease !important;
+}
+
+.faq-content {
+    border-top: 1px solid rgba(201, 169, 110, 0.15) !important;
+    background-color: #18140f !important;
+    padding: 28px 32px !important;
+}
+
+.faq-answer-text {
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #e3d7c5 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.85 !important;
+    font-family: Jost, sans-serif !important;
+}

@@ -61,7 +61,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <!-- Compiled Theme Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260802">
 
     <!-- FAQ Schema Markup for Search Rich Snippets & Quality Score -->
     <script type="application/ld+json">
@@ -112,6 +112,88 @@
       ]
     }
     </script>
+
+    <!-- Custom FAQ Accordion & Section Padding Styles -->
+    <style>
+        #faq {
+            padding-top: 100px !important;
+            padding-bottom: 120px !important;
+            margin-top: 40px !important;
+            margin-bottom: 80px !important;
+            background-color: #14100c !important;
+            border-top: 1px solid rgba(201, 169, 110, 0.2) !important;
+            border-bottom: 1px solid rgba(201, 169, 110, 0.2) !important;
+        }
+
+        .faq-list {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 20px !important;
+        }
+
+        .faq-item {
+            background-color: #231e17 !important;
+            border: 1px solid rgba(201, 169, 110, 0.25) !important;
+            border-radius: 12px !important;
+            overflow: hidden !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(201, 169, 110, 0.6) !important;
+            background-color: #28221a !important;
+        }
+
+        .faq-toggle {
+            width: 100% !important;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            padding: 24px 28px !important;
+            text-align: left !important;
+            background: transparent !important;
+            border: none !important;
+            cursor: pointer !important;
+            color: #f5eedc !important;
+            font-family: Cormorant Garamond, serif !important;
+            font-size: 1.3rem !important;
+            font-weight: 500 !important;
+            transition: color 0.3s ease !important;
+        }
+
+        .faq-toggle:hover {
+            color: #c9a96e !important;
+        }
+
+        .faq-icon {
+            width: 36px !important;
+            height: 36px !important;
+            border-radius: 50% !important;
+            border: 1px solid rgba(201, 169, 110, 0.3) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            color: #c9a96e !important;
+            flex-shrink: 0 !important;
+            transition: transform 0.3s ease, background-color 0.3s ease !important;
+        }
+
+        .faq-content {
+            border-top: 1px solid rgba(201, 169, 110, 0.15) !important;
+            background-color: #18140f !important;
+            padding: 28px 32px !important;
+        }
+
+        .faq-answer-text {
+            margin: 0 !important;
+            padding: 0 !important;
+            color: #e3d7c5 !important;
+            font-size: 1.05rem !important;
+            line-height: 1.85 !important;
+            font-family: Jost, sans-serif !important;
+        }
+    </style>
 </head>
 <body class="min-h-screen bg-background text-foreground font-sans font-light selection:bg-primary/30 selection:text-primary-foreground">
     <!-- Custom Noise Background Overlay -->
@@ -649,85 +731,85 @@
             <div class="section-divider"></div>
 
             <!-- FAQ Section -->
-            <section id="faq" class="py-24 md:py-36 px-[5%] bg-[#14100c] relative overflow-hidden border-t border-primary/20 mb-20">
-                <div class="max-w-[850px] mx-auto relative z-10">
+            <section id="faq">
+                <div class="max-w-[850px] mx-auto relative z-10 px-[5%]">
                     <div class="text-center mb-16">
                         <p class="text-[0.75rem] tracking-[0.28em] uppercase text-primary mb-3 font-semibold reveal">Got Questions?</p>
                         <h2 class="text-[clamp(2rem,4vw,3.2rem)] font-light text-foreground leading-[1.2] reveal reveal-delay-1">Frequently Asked Questions</h2>
                         <p class="text-[1.1rem] text-[#bdae98] mt-4 reveal reveal-delay-2 max-w-[600px] mx-auto">Everything you need to know about our IV hydration & vitamin therapy in Wyandotte, MI.</p>
                     </div>
 
-                    <div class="space-y-6">
+                    <div class="faq-list">
                         <!-- FAQ Item 1 -->
-                        <div class="faq-item bg-[#231e17] border border-primary/25 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/50 reveal shadow-xl">
-                            <button type="button" class="faq-toggle w-full flex justify-between items-center p-6 md:p-8 text-left cursor-pointer font-serif text-[1.2rem] md:text-[1.35rem] text-[#f5eedc] font-medium hover:text-primary transition-colors focus:outline-none">
-                                <span class="pr-4">How long does an IV hydration treatment take?</span>
-                                <span class="faq-icon w-9 h-9 rounded-full border border-primary/30 flex items-center justify-center text-primary shrink-0 transition-transform duration-300">
+                        <div class="faq-item reveal">
+                            <button type="button" class="faq-toggle">
+                                <span>How long does an IV hydration treatment take?</span>
+                                <span class="faq-icon">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
                                 </span>
                             </button>
-                            <div class="faq-content hidden border-t border-primary/15 bg-[#1a1611]">
-                                <p class="px-6 py-7 md:px-8 md:py-8 text-[1.05rem] text-[#e3d7c5] leading-[1.85]">
+                            <div class="faq-content hidden">
+                                <p class="faq-answer-text">
                                     Most IV hydration treatments take approximately 45 to 60 minutes, depending on the selected IV therapy and your individual wellness needs.
                                 </p>
                             </div>
                         </div>
 
                         <!-- FAQ Item 2 -->
-                        <div class="faq-item bg-[#231e17] border border-primary/25 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/50 reveal reveal-delay-1 shadow-xl">
-                            <button type="button" class="faq-toggle w-full flex justify-between items-center p-6 md:p-8 text-left cursor-pointer font-serif text-[1.2rem] md:text-[1.35rem] text-[#f5eedc] font-medium hover:text-primary transition-colors focus:outline-none">
-                                <span class="pr-4">How often should I receive IV therapy?</span>
-                                <span class="faq-icon w-9 h-9 rounded-full border border-primary/30 flex items-center justify-center text-primary shrink-0 transition-transform duration-300">
+                        <div class="faq-item reveal reveal-delay-1">
+                            <button type="button" class="faq-toggle">
+                                <span>How often should I receive IV therapy?</span>
+                                <span class="faq-icon">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
                                 </span>
                             </button>
-                            <div class="faq-content hidden border-t border-primary/15 bg-[#1a1611]">
-                                <p class="px-6 py-7 md:px-8 md:py-8 text-[1.05rem] text-[#e3d7c5] leading-[1.85]">
+                            <div class="faq-content hidden">
+                                <p class="faq-answer-text">
                                     Treatment frequency varies based on your goals. Some clients receive IV therapy occasionally for hydration and recovery, while others incorporate regular treatments into their wellness routine. Our medical team will help recommend a schedule that best fits your needs.
                                 </p>
                             </div>
                         </div>
 
                         <!-- FAQ Item 3 -->
-                        <div class="faq-item bg-[#231e17] border border-primary/25 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/50 reveal reveal-delay-2 shadow-xl">
-                            <button type="button" class="faq-toggle w-full flex justify-between items-center p-6 md:p-8 text-left cursor-pointer font-serif text-[1.2rem] md:text-[1.35rem] text-[#f5eedc] font-medium hover:text-primary transition-colors focus:outline-none">
-                                <span class="pr-4">Is IV hydration therapy safe?</span>
-                                <span class="faq-icon w-9 h-9 rounded-full border border-primary/30 flex items-center justify-center text-primary shrink-0 transition-transform duration-300">
+                        <div class="faq-item reveal reveal-delay-2">
+                            <button type="button" class="faq-toggle">
+                                <span>Is IV hydration therapy safe?</span>
+                                <span class="faq-icon">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
                                 </span>
                             </button>
-                            <div class="faq-content hidden border-t border-primary/15 bg-[#1a1611]">
-                                <p class="px-6 py-7 md:px-8 md:py-8 text-[1.05rem] text-[#e3d7c5] leading-[1.85]">
+                            <div class="faq-content hidden">
+                                <p class="faq-answer-text">
                                     IV hydration therapy is generally well tolerated when administered by our qualified medical professionals. Before treatment, every client completes a medical history and is evaluated to determine whether IV therapy is appropriate for them.
                                 </p>
                             </div>
                         </div>
 
                         <!-- FAQ Item 4 -->
-                        <div class="faq-item bg-[#231e17] border border-primary/25 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/50 reveal reveal-delay-3 shadow-xl">
-                            <button type="button" class="faq-toggle w-full flex justify-between items-center p-6 md:p-8 text-left cursor-pointer font-serif text-[1.2rem] md:text-[1.35rem] text-[#f5eedc] font-medium hover:text-primary transition-colors focus:outline-none">
-                                <span class="pr-4">What are the benefits of IV therapy?</span>
-                                <span class="faq-icon w-9 h-9 rounded-full border border-primary/30 flex items-center justify-center text-primary shrink-0 transition-transform duration-300">
+                        <div class="faq-item reveal reveal-delay-3">
+                            <button type="button" class="faq-toggle">
+                                <span>What are the benefits of IV therapy?</span>
+                                <span class="faq-icon">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
                                 </span>
                             </button>
-                            <div class="faq-content hidden border-t border-primary/15 bg-[#1a1611]">
-                                <p class="px-6 py-7 md:px-8 md:py-8 text-[1.05rem] text-[#e3d7c5] leading-[1.85]">
+                            <div class="faq-content hidden">
+                                <p class="faq-answer-text">
                                     IV therapy may help support hydration, energy production, immune health, athletic recovery, healthy aging, skin health, and overall wellness by delivering fluids, vitamins, minerals, and nutrients directly into the bloodstream.
                                 </p>
                             </div>
                         </div>
 
                         <!-- FAQ Item 5 -->
-                        <div class="faq-item bg-[#231e17] border border-primary/25 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/50 reveal reveal-delay-4 shadow-xl">
-                            <button type="button" class="faq-toggle w-full flex justify-between items-center p-6 md:p-8 text-left cursor-pointer font-serif text-[1.2rem] md:text-[1.35rem] text-[#f5eedc] font-medium hover:text-primary transition-colors focus:outline-none">
-                                <span class="pr-4">Who is a candidate for IV therapy?</span>
-                                <span class="faq-icon w-9 h-9 rounded-full border border-primary/30 flex items-center justify-center text-primary shrink-0 transition-transform duration-300">
+                        <div class="faq-item reveal reveal-delay-4">
+                            <button type="button" class="faq-toggle">
+                                <span>Who is a candidate for IV therapy?</span>
+                                <span class="faq-icon">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
                                 </span>
                             </button>
-                            <div class="faq-content hidden border-t border-primary/15 bg-[#1a1611]">
-                                <p class="px-6 py-7 md:px-8 md:py-8 text-[1.05rem] text-[#e3d7c5] leading-[1.85]">
+                            <div class="faq-content hidden">
+                                <p class="faq-answer-text">
                                     Many healthy adults looking to support hydration and overall wellness may be candidates for IV therapy. Your provider will review your medical history to determine which treatment is most appropriate for you.
                                 </p>
                             </div>
@@ -735,6 +817,8 @@
                     </div>
                 </div>
             </section>
+            
+            <div class="section-divider"></div>
 
         </main>
 
@@ -770,6 +854,6 @@
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
     <!-- Custom Logic Script -->
-    <script src="app.js"></script>
+    <script src="app.js?v=20260802"></script>
 </body>
 </html>
