@@ -113,6 +113,10 @@
     border-bottom: 1px solid rgba(201, 169, 110, 0.2) !important;
 }
 
+#faq .max-w-container {
+    max-width: 680px !important;
+}
+
 .faq-list {
     display: flex !important;
     flex-direction: column !important;
