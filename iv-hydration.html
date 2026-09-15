@@ -197,6 +197,199 @@
             line-height: 1.85 !important;
             font-family: Jost, sans-serif !important;
         }
+    
+        /* Hero 2-Column Responsive Layout */
+        .hero-section-custom {
+            min-height: 100vh !important;
+            position: relative !important;
+            display: flex !important;
+            align-items: center !important;
+            overflow: hidden !important;
+            padding: 130px 4% 60px 4% !important;
+        }
+
+        .hero-wrapper {
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            width: 100% !important;
+            position: relative !important;
+            z-index: 10 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 36px !important;
+        }
+
+        @media (min-width: 992px) {
+            .hero-wrapper {
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                gap: 40px !important;
+            }
+            .hero-left {
+                flex: 1 1 55% !important;
+                min-width: 0 !important;
+            }
+            .hero-right {
+                flex: 0 0 410px !important;
+                max-width: 410px !important;
+                width: 100% !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .hero-section-custom {
+                padding: 120px 5% 60px 5% !important;
+            }
+            .hero-wrapper {
+                max-width: 540px !important;
+                margin: 0 auto !important;
+            }
+            .hero-left {
+                width: 100% !important;
+            }
+            .hero-right {
+                width: 100% !important;
+            }
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif !important;
+            font-size: 3.2rem !important;
+            line-height: 1.08 !important;
+            font-weight: 300 !important;
+            color: #f5eedc !important;
+            margin: 0 0 20px 0 !important;
+            letter-spacing: -0.01em !important;
+        }
+
+        .hero-title em {
+            font-style: italic !important;
+            color: #c9a96e !important;
+        }
+
+        .hero-desc {
+            font-family: 'Jost', sans-serif !important;
+            font-size: 1.1rem !important;
+            font-weight: 300 !important;
+            color: rgba(255, 255, 255, 0.88) !important;
+            line-height: 1.65 !important;
+            margin: 0 0 28px 0 !important;
+        }
+
+        @media (min-width: 1200px) {
+            .hero-title {
+                font-size: 3.6rem !important;
+            }
+            .hero-desc {
+                font-size: 1.15rem !important;
+            }
+            .hero-right {
+                flex: 0 0 430px !important;
+                max-width: 430px !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 2.2rem !important;
+            }
+            .hero-desc {
+                font-size: 1.02rem !important;
+            }
+            .hero-lead-card {
+                padding: 24px 20px !important;
+            }
+        }
+
+        .hero-lead-card {
+            background-color: rgba(26, 22, 17, 0.95) !important;
+            border: 1px solid rgba(201, 169, 110, 0.3) !important;
+            border-radius: 12px !important;
+            padding: 28px 32px !important;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7) !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+        }
+
+        .hero-lead-card .form-title {
+            font-family: 'Cormorant Garamond', serif !important;
+            font-size: 1.8rem !important;
+            color: #c9a96e !important;
+            line-height: 1.2 !important;
+            margin: 0 0 6px 0 !important;
+        }
+
+        .hero-lead-card .form-subtitle {
+            font-size: 0.92rem !important;
+            color: #bdae98 !important;
+            margin: 0 0 18px 0 !important;
+            line-height: 1.45 !important;
+        }
+
+        .hero-lead-card .form-group {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 5px !important;
+            margin-bottom: 12px !important;
+            text-align: left !important;
+        }
+
+        .hero-lead-card label {
+            display: block !important;
+            font-size: 0.85rem !important;
+            color: #f5eedc !important;
+            font-weight: 500 !important;
+            margin: 0 !important;
+        }
+
+        .hero-lead-card input,
+        .hero-lead-card select {
+            width: 100% !important;
+            height: 42px !important;
+            background-color: #120f0c !important;
+            border: 1px solid rgba(201, 169, 110, 0.25) !important;
+            border-radius: 6px !important;
+            padding: 0 12px !important;
+            color: #f5eedc !important;
+            font-family: 'Jost', sans-serif !important;
+            font-size: 0.9rem !important;
+            outline: none !important;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+            box-sizing: border-box !important;
+        }
+
+        .hero-lead-card input:focus,
+        .hero-lead-card select:focus {
+            border-color: #c9a96e !important;
+            box-shadow: 0 0 0 2px rgba(201, 169, 110, 0.25) !important;
+        }
+
+        .hero-lead-card .hero-submit-btn {
+            width: 100% !important;
+            height: 46px !important;
+            background-color: #c9a96e !important;
+            color: #120f0c !important;
+            font-family: 'Jost', sans-serif !important;
+            font-size: 0.82rem !important;
+            font-weight: 600 !important;
+            letter-spacing: 0.12em !important;
+            text-transform: uppercase !important;
+            border: none !important;
+            border-radius: 6px !important;
+            cursor: pointer !important;
+            margin-top: 16px !important;
+            transition: background-color 0.2s ease, transform 0.2s ease !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        .hero-lead-card .hero-submit-btn:hover {
+            background-color: #ebd9b3 !important;
+            transform: translateY(-1px) !important;
+        }
+
     </style>
 </head>
 <body class="min-h-screen bg-background text-foreground font-sans font-light selection:bg-primary/30 selection:text-primary-foreground">
@@ -225,57 +418,102 @@
 
         <!-- Main Content Area -->
         <main class="flex-grow">
-            <!-- Hero Section -->
-            <section class="min-h-screen relative flex items-center overflow-hidden px-[5%] pt-[180px] sm:pt-[120px] pb-[80px]">
+                        <!-- Hero Section with Bounded Width & Right Lead Form -->
+            <section class="hero-section-custom">
                 <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
                     <source src="assets/iv-hydration/iv-hydration-drip.mp4" type="video/mp4">
                 </video>
-                <div class="absolute inset-0 bg-black/60"></div>
+                <div class="absolute inset-0 bg-black/65"></div>
                 <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(201,169,110,0.15)_0%,transparent_60%)] pointer-events-none"></div>
                 <div class="absolute inset-0 opacity-[0.03] bg-noise mix-blend-overlay pointer-events-none"></div>
-                <div class="absolute top-0 left-[5%] w-[1px] h-full bg-gradient-to-b from-transparent via-primary to-transparent opacity-30"></div>
 
-                <div class="relative max-w-[700px] z-10">
-                    <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-3.5 py-1.5 rounded-full mb-8 reveal">
-                        <div class="flex gap-0.5">
-                            <!-- Star SVGs -->
-                            <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <div class="hero-wrapper">
+                    <!-- Left Column: Copy & Headlines -->
+                    <div class="hero-left text-left">
+                        <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-3.5 py-1.5 rounded-full mb-6 reveal">
+                            <div class="flex gap-0.5">
+                                <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <span class="text-[0.65rem] font-semibold tracking-widest uppercase text-primary">170+ 5-Star Reviews</span>
+                            <span class="text-primary/40">&bull;</span>
+                            <span class="text-[0.65rem] font-semibold tracking-widest uppercase text-accent">Starting at $200</span>
                         </div>
-                        <span class="text-[0.65rem] font-semibold tracking-widest uppercase text-primary">170+ 5-Star Reviews</span>
-                        <span class="text-primary/40">&bull;</span>
-                        <span class="text-[0.65rem] font-semibold tracking-widest uppercase text-accent">Starting at $200</span>
+
+                        <h1 class="hero-title reveal reveal-delay-2">
+                            Premium IV Hydration &<br>
+                            <em class="italic text-primary">Vitamin Drips</em><br>
+                            in Wyandotte.
+                        </h1>
+
+                        <p class="hero-desc reveal reveal-delay-3">
+                            Rehydrate, boost energy, and restore essential vitamins fast with physician-supervised IV therapy administered by medical professionals.
+                        </p>
+
+                        <div class="flex flex-wrap items-center gap-6 reveal reveal-delay-4">
+                            <a href="#services" class="text-[0.82rem] font-medium tracking-[0.14em] uppercase text-primary hover:text-accent transition-colors flex items-center gap-2">
+                                <span>Explore All 4 IV Drips</span>
+                                <svg class="w-4 h-4" stroke-width="1.6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
 
-                    <h1 class="text-[clamp(3.2rem,7vw,6rem)] font-light leading-[1.05] text-foreground mb-7 tracking-[-0.01em] reveal reveal-delay-2">
-                        Premium IV Hydration &<br>
-                        <em class="italic text-primary">Vitamin Drips</em><br>
-                        in Wyandotte.
-                    </h1>
+                    <!-- Right Column: Lead Form Card -->
+                    <div class="hero-right reveal reveal-delay-2" id="book">
+                        <div class="hero-lead-card">
+                            <h3 class="form-title">Replenish Your Body Today</h3>
+                            <p class="form-subtitle">Book your <strong style="color: #f5eedc; font-weight: 500;">free wellness</strong> consultation in Wyandotte.</p>
 
-                    <p class="text-[1.2rem] font-light text-white leading-[1.75] max-w-[540px] mb-11 reveal reveal-delay-3">
-                        Rehydrate, boost energy, and restore essential vitamins fast with physician-supervised IV therapy administered by medical professionals.
-                    </p>
+                            <form id="assessment-form" novalidate data-treatment="IV Hydration Assessment">
+                                <input type="hidden" id="formType" value="IV Hydration Lead Form">
+                                <div class="form-group">
+                                    <label for="fullName">Your Full Name <span class="text-destructive">*</span></label>
+                                    <input type="text" id="fullName" placeholder="Jane Doe">
+                                    <span class="text-xs font-medium text-destructive form-error" style="display: none;"></span>
+                                </div>
 
-                    <div class="flex flex-wrap gap-4 reveal reveal-delay-4">
-                        <a href="#book" class="bg-primary text-primary-foreground px-9 py-4 font-sans text-[0.82rem] font-medium tracking-[0.14em] uppercase transition-all hover:bg-accent hover:-translate-y-[1px] inline-block rounded-sm">Book My IV Drip</a>
-                        <a href="#services" class="bg-transparent text-foreground px-9 py-4 font-sans text-[0.82rem] font-medium tracking-[0.14em] uppercase border border-foreground/25 transition-colors hover:border-primary hover:text-primary inline-flex items-center gap-2.5 rounded-sm">
-                            <span>View Drips</span>
-                            <!-- Arrow Right SVG -->
-                            <svg class="w-3.5 h-3.5" stroke-width="1.4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
-                        </a>
+                                <div class="form-group">
+                                    <label for="email">Your Email <span class="text-destructive">*</span></label>
+                                    <input type="email" id="email" placeholder="jane@example.com">
+                                    <span class="text-xs font-medium text-destructive form-error" style="display: none;"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone Number <span class="text-destructive">*</span></label>
+                                    <input type="tel" id="phone" placeholder="(734) 555-0123">
+                                    <span class="text-xs font-medium text-destructive form-error" style="display: none;"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="landingConcern">Preferred IV Protocol <span class="text-destructive">*</span></label>
+                                    <select id="landingConcern">
+                                        <option value="" disabled selected>Select an IV Therapy protocol...</option>
+                                        <option value="Myers' Cocktail IV Therapy">Myers' Cocktail IV Therapy (Energy & Immunity)</option>
+                                        <option value="NAD+ IV Therapy">NAD+ IV Therapy (Cellular Energy & Anti-Aging)</option>
+                                        <option value="Timeless IV Therapy">Timeless IV Therapy (Skin, Hair & Nail Beauty)</option>
+                                        <option value="After Party IV Therapy">After Party IV Therapy (Hangover & Rapid Recovery)</option>
+                                        <option value="General IV Hydration Consultation">General IV Hydration Consultation</option>
+                                    </select>
+                                    <span class="text-xs font-medium text-destructive form-error" style="display: none;"></span>
+                                </div>
+
+                                <button type="submit" class="hero-submit-btn form-submit-btn">Book My Consultation</button>
+                            </form>
+
+                            <a href="tel:+17348384685" class="flex items-center gap-2 text-[0.82rem] text-muted-foreground no-underline mt-4 justify-center tracking-[0.05em] transition-colors hover:text-primary">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>Or call us: (734) 838-4685</span>
+                            </a>
+                        </div>
                     </div>
-                </div>
-
-                <div class="absolute bottom-[80px] right-[5%] text-right hidden sm:block reveal reveal-delay-2 z-10">
-                    <span class="font-serif text-[2.5rem] font-light text-primary leading-none block mb-1">Starting at $200</span>
-                    <span class="text-[0.72rem] tracking-[0.2em] uppercase text-muted-foreground">Physician-Supervised IV Drips</span>
                 </div>
             </section>
 
@@ -668,72 +906,15 @@
                 </div>
             </section>
 
-            <!-- Lead Capture Assessment Form Section -->
-            
-            <div class="section-divider"></div>
-
-<section class="py-[120px] px-[5%] text-center relative overflow-hidden" id="book">
-                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(201,169,110,0.07)_0%,transparent_65%)] pointer-events-none"></div>
-                <div class="relative max-w-[800px] mx-auto">
-                    <div class="reveal reveal-delay-3 w-full max-w-[700px] mx-auto">
-                        <!-- Form Card Container -->
-                        <div class="bg-card p-8 md:p-12 text-left rounded-xl border border-primary/10 shadow-2xl">
-                            <div class="text-center mb-10">
-                                <h3 class="font-serif text-[2.2rem] text-primary mb-4 leading-tight">Replenish Your Body Today</h3>
-                                <p class="text-[1.15rem] text-muted-foreground">Book your <strong class="text-foreground font-medium">free wellness</strong> consultation. Share your details and select a convenient time to visit our Wyandotte clinic.</p>
-                            </div>
-
-                            <form id="assessment-form" novalidate class="space-y-6" data-treatment="IV Hydration Assessment">
-                                <input type="hidden" id="formType" value="IV Hydration Lead Form">
-                                <!-- Name -->
-                                <div class="flex flex-col space-y-2 form-group">
-                                    <label for="fullName" class="text-[1.05rem] text-foreground font-medium">Your Full Name <span class="text-destructive">*</span></label>
-                                    <input type="text" id="fullName" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-background border-input h-11">
-                                    <span class="text-sm font-medium text-destructive form-error" style="display: none;"></span>
-                                </div>
-
-                                <!-- Email -->
-                                <div class="flex flex-col space-y-2 form-group">
-                                    <label for="email" class="text-[1.05rem] text-foreground font-medium">Your Email <span class="text-destructive">*</span></label>
-                                    <input type="email" id="email" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-background border-input h-11">
-                                    <span class="text-sm font-medium text-destructive form-error" style="display: none;"></span>
-                                </div>
-
-                                <!-- Phone -->
-                                <div class="flex flex-col space-y-2 form-group">
-                                    <label for="phone" class="text-[1.05rem] text-foreground font-medium">Phone Number <span class="text-destructive">*</span></label>
-                                    <input type="tel" id="phone" placeholder="(555) 555-5555" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-background border-input h-11">
-                                    <span class="text-sm font-medium text-destructive form-error" style="display: none;"></span>
-                                </div>
-
-                                <!-- Preferred IV Therapy Protocol -->
-                                <div class="flex flex-col space-y-2 form-group">
-                                    <label for="landingConcern" class="text-[1.05rem] text-foreground font-medium">Which IV Therapy protocol are you interested in? <span class="text-destructive">*</span></label>
-                                    <select id="landingConcern" class="flex h-11 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-background border-input">
-                                        <option value="" disabled selected>Select an IV Therapy protocol...</option>
-                                        <option value="Myers' Cocktail IV Therapy">Myers' Cocktail IV Therapy (Energy & Immunity)</option>
-                                        <option value="NAD+ IV Therapy">NAD+ IV Therapy (Cellular Energy & Anti-Aging)</option>
-                                        <option value="Timeless IV Therapy">Timeless IV Therapy (Skin, Hair & Nail Beauty)</option>
-                                        <option value="After Party IV Therapy">After Party IV Therapy (Hangover & Rapid Recovery)</option>
-                                        <option value="General IV Hydration Consultation">General IV Hydration Consultation</option>
-                                    </select>
-                                    <span class="text-sm font-medium text-destructive form-error" style="display: none;"></span>
-                                </div>
-
-                                <button type="submit" class="w-full h-14 text-[0.85rem] tracking-[0.12em] uppercase font-medium mt-6 hover:-translate-y-[1px] transition-transform bg-primary text-primary-foreground hover:bg-primary/90 flex items-center justify-center cursor-pointer rounded-md form-submit-btn">Book My Consultation</button>
-                            </form>
-                        </div>
-                    </div>
-
-                    <!-- Phone link below form -->
-                    <a href="tel:+17348384685" class="flex items-center gap-2 text-[0.88rem] text-muted-foreground no-underline mt-8 justify-center tracking-[0.05em] transition-colors hover:text-primary reveal reveal-delay-3">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                        </svg>
-                        (734) 838-4685
-                    </a>
+            <!-- Bottom Consultation CTA Section -->
+            <section class="py-[80px] px-[5%] text-center relative overflow-hidden bg-card border-y border-primary/20">
+                <div class="max-w-[700px] mx-auto relative z-10">
+                    <h3 class="font-serif text-[clamp(2rem,3.5vw,2.8rem)] font-light text-foreground mb-4">Ready to Restore Your Body?</h3>
+                    <p class="text-[1.1rem] text-muted-foreground mb-8">Schedule your personalized IV hydration session in Wyandotte, MI.</p>
+                    <a href="#book" class="bg-primary text-primary-foreground px-10 py-4 font-sans text-[0.85rem] font-medium tracking-[0.14em] uppercase transition-all hover:bg-accent hover:-translate-y-[1px] inline-block rounded-sm">Book My Consultation</a>
                 </div>
             </section>
+
             <div class="section-divider"></div>
 
             <!-- FAQ Section -->
