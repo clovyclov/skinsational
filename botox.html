@@ -36,6 +36,231 @@
 
     <!-- Compiled Theme Stylesheet (Tailwind utility system) -->
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Hero 2-Column Responsive Layout */
+        .hero-section-custom {
+            min-height: 100vh !important;
+            position: relative !important;
+            display: flex !important;
+            align-items: center !important;
+            overflow: hidden !important;
+            padding: 130px 4% 60px 4% !important;
+        }
+
+        .hero-overlay {
+            position: absolute !important;
+            inset: 0 !important;
+            background: linear-gradient(135deg, rgba(14, 11, 9, 0.90) 0%, rgba(14, 11, 9, 0.82) 45%, rgba(14, 11, 9, 0.70) 100%) !important;
+            pointer-events: none !important;
+            z-index: 1 !important;
+        }
+
+        @media (max-width: 991px) {
+            .hero-overlay {
+                background: rgba(14, 11, 9, 0.88) !important;
+            }
+        }
+
+        .hero-wrapper {
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            width: 100% !important;
+            position: relative !important;
+            z-index: 10 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 36px !important;
+        }
+
+        @media (min-width: 992px) {
+            .hero-wrapper {
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                gap: 40px !important;
+            }
+            .hero-left {
+                flex: 1 1 55% !important;
+                min-width: 0 !important;
+            }
+            .hero-right {
+                flex: 0 0 410px !important;
+                max-width: 410px !important;
+                width: 100% !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .hero-section-custom {
+                padding: 120px 5% 60px 5% !important;
+            }
+            .hero-wrapper {
+                max-width: 540px !important;
+                margin: 0 auto !important;
+            }
+            .hero-left {
+                width: 100% !important;
+            }
+            .hero-right {
+                width: 100% !important;
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            background-color: rgba(26, 22, 17, 0.88) !important;
+            border: 1px solid rgba(201, 169, 110, 0.35) !important;
+            padding: 6px 14px !important;
+            border-radius: 9999px !important;
+            margin-bottom: 24px !important;
+            backdrop-filter: blur(8px) !important;
+            -webkit-backdrop-filter: blur(8px) !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif !important;
+            font-size: 3.2rem !important;
+            line-height: 1.08 !important;
+            font-weight: 300 !important;
+            color: #f5eedc !important;
+            margin: 0 0 20px 0 !important;
+            letter-spacing: -0.01em !important;
+            text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9) !important;
+        }
+
+        .hero-title em {
+            font-style: italic !important;
+            color: #c9a96e !important;
+        }
+
+        .hero-desc {
+            font-family: 'Jost', sans-serif !important;
+            font-size: 1.1rem !important;
+            font-weight: 300 !important;
+            color: rgba(255, 255, 255, 0.92) !important;
+            line-height: 1.65 !important;
+            margin: 0 0 28px 0 !important;
+            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.85) !important;
+        }
+
+        @media (min-width: 1200px) {
+            .hero-title {
+                font-size: 3.6rem !important;
+            }
+            .hero-desc {
+                font-size: 1.15rem !important;
+            }
+            .hero-right {
+                flex: 0 0 430px !important;
+                max-width: 430px !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 2.2rem !important;
+            }
+            .hero-desc {
+                font-size: 1.02rem !important;
+            }
+            .hero-lead-card {
+                padding: 24px 20px !important;
+            }
+        }
+
+        .hero-lead-card {
+            background-color: rgba(26, 22, 17, 0.95) !important;
+            border: 1px solid rgba(201, 169, 110, 0.3) !important;
+            border-radius: 12px !important;
+            padding: 28px 32px !important;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7) !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+        }
+
+        .hero-lead-card .form-title {
+            font-family: 'Cormorant Garamond', serif !important;
+            font-size: 1.8rem !important;
+            color: #c9a96e !important;
+            line-height: 1.2 !important;
+            margin: 0 0 6px 0 !important;
+        }
+
+        .hero-lead-card .form-subtitle {
+            font-size: 0.92rem !important;
+            color: #bdae98 !important;
+            margin: 0 0 18px 0 !important;
+            line-height: 1.45 !important;
+        }
+
+        .hero-lead-card .form-group {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 5px !important;
+            margin-bottom: 12px !important;
+            text-align: left !important;
+        }
+
+        .hero-lead-card label {
+            display: block !important;
+            font-size: 0.85rem !important;
+            color: #f5eedc !important;
+            font-weight: 500 !important;
+            margin: 0 !important;
+        }
+
+        .hero-lead-card input,
+        .hero-lead-card select {
+            width: 100% !important;
+            height: 42px !important;
+            background-color: #120f0c !important;
+            border: 1px solid rgba(201, 169, 110, 0.25) !important;
+            border-radius: 6px !important;
+            padding: 0 12px !important;
+            color: #f5eedc !important;
+            font-family: 'Jost', sans-serif !important;
+            font-size: 0.9rem !important;
+            outline: none !important;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+            box-sizing: border-box !important;
+        }
+
+        .hero-lead-card input:focus,
+        .hero-lead-card select:focus {
+            border-color: #c9a96e !important;
+            box-shadow: 0 0 0 2px rgba(201, 169, 110, 0.25) !important;
+        }
+
+        .hero-lead-card .hero-submit-btn {
+            width: 100% !important;
+            height: 46px !important;
+            background-color: #c9a96e !important;
+            color: #120f0c !important;
+            font-family: 'Jost', sans-serif !important;
+            font-size: 0.82rem !important;
+            font-weight: 600 !important;
+            letter-spacing: 0.12em !important;
+            text-transform: uppercase !important;
+            border: none !important;
+            border-radius: 6px !important;
+            cursor: pointer !important;
+            margin-top: 16px !important;
+            transition: background-color 0.2s ease, transform 0.2s ease !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        .hero-lead-card .hero-submit-btn:hover {
+            background-color: #ebd9b3 !important;
+            transform: translateY(-1px) !important;
+        }
+    </style>
+
 </head>
 <body class="min-h-screen bg-background text-foreground font-sans font-light selection:bg-primary/30 selection:text-primary-foreground">
     <!-- Custom Noise Background Overlay -->
@@ -63,55 +288,103 @@
 
         <!-- Main Content Area -->
         <main class="flex-grow">
-            <!-- Hero Section -->
-            <section class="min-h-screen relative flex items-center overflow-hidden px-[5%] pt-[180px] sm:pt-[120px] pb-[80px]">
+            <!-- Hero Section (2-Column Responsive Layout) -->
+            <section class="hero-section-custom">
                 <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
                     <source src="https://skinsationalwellness.com/wp-content/uploads/2024/03/skinful-home-video-sm.mp4" type="video/mp4">
                 </video>
-                <div class="absolute inset-0 bg-black/60"></div>
-                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(201,169,110,0.15)_0%,transparent_60%)] pointer-events-none"></div>
-                <div class="absolute inset-0 opacity-[0.03] bg-noise mix-blend-overlay pointer-events-none"></div>
-                <div class="absolute top-0 left-[5%] w-[1px] h-full bg-gradient-to-b from-transparent via-primary to-transparent opacity-30"></div>
+                <div class="hero-overlay"></div>
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(201,169,110,0.15)_0%,transparent_60%)] pointer-events-none z-[2]"></div>
+                <div class="absolute inset-0 opacity-[0.03] bg-noise mix-blend-overlay pointer-events-none z-[2]"></div>
 
-                <div class="relative max-w-[700px] z-10">
-                    <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-3.5 py-1.5 rounded-full mb-8 reveal">
-                        <div class="flex gap-0.5">
-                            <!-- Star SVGs -->
-                            <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <div class="hero-wrapper">
+                    <!-- Left Column: Copy & Headlines -->
+                    <div class="hero-left text-left">
+                        <div class="hero-badge reveal">
+                            <div class="flex gap-0.5">
+                                <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg class="w-3 h-3 fill-primary text-primary" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <span class="text-[0.65rem] font-semibold tracking-widest uppercase text-primary">170+ 5-Star Reviews</span>
+                            <span class="text-primary/40">&bull;</span>
+                            <span class="text-[0.65rem] font-semibold tracking-widest uppercase text-accent">Physician-Led</span>
                         </div>
-                        <span class="text-[0.65rem] font-semibold tracking-widest uppercase text-primary">170+ 5-Star Google Reviews</span>
+
+                        <h1 class="hero-title reveal reveal-delay-2">
+                            Smoother. Fresher.<br>
+                            <em class="italic text-primary">Younger.</em><br>
+                            Botox Done Right.
+                        </h1>
+
+                        <p class="hero-desc reveal reveal-delay-3">
+                            Located in Wyandotte, MI. FDA-approved wrinkle-relaxing treatments that preserve your natural facial expressions while erasing lines.
+                        </p>
+
+                        <div class="flex flex-wrap items-center gap-6 reveal reveal-delay-4">
+                            <a href="#services" class="text-[0.82rem] font-medium tracking-[0.14em] uppercase text-primary hover:text-accent transition-colors flex items-center gap-2">
+                                <span>Explore Treatment Areas</span>
+                                <svg class="w-4 h-4" stroke-width="1.6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
 
-                    <h1 class="text-[clamp(3.2rem,7vw,6rem)] font-light leading-[1.05] text-foreground mb-7 tracking-[-0.01em] reveal reveal-delay-2">
-                        Smoother. Fresher.<br>
-                        <em class="italic text-primary">Younger.</em><br>
-                        Botox Done Right.
-                    </h1>
+                    <!-- Right Column: Lead Form Card -->
+                    <div class="hero-right reveal reveal-delay-2" id="book">
+                        <div class="hero-lead-card">
+                            <h3 class="form-title">Claim $50 Off Your Botox</h3>
+                            <p class="form-subtitle"><strong style="color: #f5eedc; font-weight: 500;">Limited vouchers available</strong> for new clients only.</p>
 
-                    <p class="text-[1.2rem] font-light text-white leading-[1.75] max-w-[540px] mb-11 reveal reveal-delay-3">
-                        Located in Wyandotte, MI. FDA-approved wrinkle-relaxing treatments that actually work. Real results, real clients, no filters.
-                    </p>
+                            <form id="assessment-form" novalidate data-treatment="Botox Assessment">
+                                <input type="hidden" id="formType" value="Botox Lead Form">
+                                <div class="form-group">
+                                    <label for="fullName">Your Full Name <span class="text-destructive">*</span></label>
+                                    <input type="text" id="fullName" placeholder="Jane Doe">
+                                    <span class="text-xs font-medium text-destructive form-error" style="display: none;"></span>
+                                </div>
 
-                    <div class="flex flex-wrap gap-4 reveal reveal-delay-4">
-                        <a href="#book" class="bg-primary text-primary-foreground px-9 py-4 font-sans text-[0.82rem] font-medium tracking-[0.14em] uppercase transition-all hover:bg-accent hover:-translate-y-[1px] inline-block rounded-sm">Start Assessment</a>
-                        <a href="#services" class="bg-transparent text-foreground px-9 py-4 font-sans text-[0.82rem] font-medium tracking-[0.14em] uppercase border border-foreground/25 transition-colors hover:border-primary hover:text-primary inline-flex items-center gap-2.5 rounded-sm">
-                            <span>View Services</span>
-                            <!-- Arrow Right SVG -->
-                            <svg class="w-3.5 h-3.5" stroke-width="1.4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
-                        </a>
+                                <div class="form-group">
+                                    <label for="email">Your Email <span class="text-destructive">*</span></label>
+                                    <input type="email" id="email" placeholder="jane@example.com">
+                                    <span class="text-xs font-medium text-destructive form-error" style="display: none;"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone Number <span class="text-destructive">*</span></label>
+                                    <input type="tel" id="phone" placeholder="(734) 555-0123">
+                                    <span class="text-xs font-medium text-destructive form-error" style="display: none;"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="landingConcern">Primary Area of Concern <span class="text-destructive">*</span></label>
+                                    <select id="landingConcern">
+                                        <option value="" disabled selected>Select your area of concern...</option>
+                                        <option value="Forehead Lines & Creases">Forehead Lines & Creases</option>
+                                        <option value="Frown Lines (Elevens)">Frown Lines between Brows (Elevens)</option>
+                                        <option value="Crows Feet">Crow's Feet (Around Eyes)</option>
+                                        <option value="Jaw Tension or Slimming (TMJ)">Jaw Tension or Slimming (TMJ)</option>
+                                        <option value="Lip Flip / Gummy Smile">Lip Flip or Gummy Smile</option>
+                                        <option value="Preventative / General Consultation">General Wrinkle Relaxer Consultation</option>
+                                    </select>
+                                    <span class="text-xs font-medium text-destructive form-error" style="display: none;"></span>
+                                </div>
+
+                                <button type="submit" class="hero-submit-btn form-submit-btn">Book My Consultation</button>
+                            </form>
+
+                            <a href="tel:+17348384685" class="flex items-center gap-2 text-[0.82rem] text-muted-foreground no-underline mt-4 justify-center tracking-[0.05em] transition-colors hover:text-primary">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>Or call us: (734) 838-4685</span>
+                            </a>
+                        </div>
                     </div>
-                </div>
-
-                <div class="absolute bottom-[80px] right-[5%] text-right hidden sm:block reveal reveal-delay-2 z-10">
-                    <span class="font-serif text-[4rem] font-light text-primary leading-none block">4</span>
-                    <span class="text-[0.72rem] tracking-[0.2em] uppercase text-muted-foreground">Treatment Areas</span>
                 </div>
             </section>
 
@@ -545,68 +818,28 @@
                 </div>
             </section>
 
-            <!-- Lead Capture Assessment Form Section -->
-            <section class="py-[120px] px-[5%] text-center relative overflow-hidden" id="book">
-                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(201,169,110,0.07)_0%,transparent_65%)] pointer-events-none"></div>
-                <div class="relative max-w-[800px] mx-auto">
-                    <div class="reveal reveal-delay-3 w-full max-w-[700px] mx-auto">
-                        <!-- Form Card Container -->
-                        <div class="bg-card p-8 md:p-12 text-left rounded-xl border border-primary/10 shadow-2xl">
-                            <div class="text-center mb-10">
-                                <h3 class="font-serif text-[2.2rem] text-primary mb-4 leading-tight">Transform Your Skin Today</h3>
-                                <p class="text-[1.15rem] text-muted-foreground">Book your <strong class="text-foreground font-medium">free in-person</strong> skin assessment. Provide your details and book a time to come and visit us.</p>
-                            </div>
-
-                            <form id="assessment-form" novalidate class="space-y-6" data-treatment="Botox Assessment">
-                                <input type="hidden" id="formType" value="Botox Lead Form">
-                                <!-- Name -->
-                                <div class="flex flex-col space-y-2 form-group">
-                                    <label for="fullName" class="text-[1.05rem] text-foreground font-medium">Your Full Name <span class="text-destructive">*</span></label>
-                                    <input type="text" id="fullName" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-background border-input h-11">
-                                    <span class="text-sm font-medium text-destructive form-error" style="display: none;"></span>
-                                </div>
-
-                                <!-- Email -->
-                                <div class="flex flex-col space-y-2 form-group">
-                                    <label for="email" class="text-[1.05rem] text-foreground font-medium">Your Email <span class="text-destructive">*</span></label>
-                                    <input type="email" id="email" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-background border-input h-11">
-                                    <span class="text-sm font-medium text-destructive form-error" style="display: none;"></span>
-                                </div>
-
-                                <!-- Phone -->
-                                <div class="flex flex-col space-y-2 form-group">
-                                    <label for="phone" class="text-[1.05rem] text-foreground font-medium">Phone Number <span class="text-destructive">*</span></label>
-                                    <input type="tel" id="phone" placeholder="(555) 555-5555" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-background border-input h-11">
-                                    <span class="text-sm font-medium text-destructive form-error" style="display: none;"></span>
-                                </div>
-
-                                <!-- Primary Botox Concern -->
-                                <div class="flex flex-col space-y-2 form-group">
-                                    <label for="landingConcern" class="text-[1.05rem] text-foreground font-medium">What is your primary area of concern? <span class="text-destructive">*</span></label>
-                                    <select id="landingConcern" class="flex h-11 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm bg-background border-input">
-                                        <option value="" disabled selected>Select your area of concern...</option>
-                                        <option value="Forehead Lines & Creases">Forehead Lines & Creases</option>
-                                        <option value="Frown Lines (Elevens)">Frown Lines between Brows (Elevens)</option>
-                                        <option value="Crows Feet">Crow's Feet (Around Eyes)</option>
-                                        <option value="Jaw Tension or Slimming (TMJ)">Jaw Tension or Slimming (TMJ)</option>
-                                        <option value="Lip Flip / Gummy Smile">Lip Flip or Gummy Smile</option>
-                                        <option value="Preventative / General Consultation">General Wrinkle Relaxer Consultation</option>
-                                    </select>
-                                    <span class="text-sm font-medium text-destructive form-error" style="display: none;"></span>
-                                </div>
-
-                                <button type="submit" class="w-full h-14 text-[0.85rem] tracking-[0.12em] uppercase font-medium mt-6 hover:-translate-y-[1px] transition-transform bg-primary text-primary-foreground hover:bg-primary/90 flex items-center justify-center cursor-pointer rounded-md form-submit-btn">Book My Consultation</button>
-                            </form>
-                        </div>
+            <!-- Bottom CTA Consultation Banner -->
+            <section class="py-[90px] px-[5%] text-center relative overflow-hidden bg-card/60 border-t border-primary/15">
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(201,169,110,0.08)_0%,transparent_65%)] pointer-events-none"></div>
+                <div class="relative max-w-[700px] mx-auto z-10">
+                    <p class="text-[0.72rem] tracking-[0.28em] uppercase text-primary mb-3 font-semibold reveal">Personalized Wrinkle Treatment</p>
+                    <h2 class="font-serif text-[clamp(2.2rem,4vw,3.2rem)] font-light leading-[1.15] text-foreground mb-5 reveal reveal-delay-1">
+                        Ready for smoother, refreshed skin?
+                    </h2>
+                    <p class="text-[1.1rem] text-muted-foreground leading-[1.7] mb-8 reveal reveal-delay-2 max-w-[580px] mx-auto">
+                        Book your in-person Botox assessment in Wyandotte, MI. Our licensed medical injectors evaluate your facial dynamics to preserve your natural expressions.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4 reveal reveal-delay-3">
+                        <a href="#book" class="bg-primary text-primary-foreground px-9 py-4 font-sans text-[0.82rem] font-medium tracking-[0.14em] uppercase transition-all hover:bg-accent hover:-translate-y-[1px] inline-block rounded-sm">
+                            Book My Consultation
+                        </a>
+                        <a href="tel:+17348384685" class="bg-transparent text-foreground px-8 py-4 font-sans text-[0.82rem] font-medium tracking-[0.14em] uppercase border border-foreground/25 transition-colors hover:border-primary hover:text-primary inline-flex items-center gap-2.5 rounded-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>(734) 838-4685</span>
+                        </a>
                     </div>
-
-                    <!-- Phone link below form -->
-                    <a href="tel:+17348384685" class="flex items-center gap-2 text-[0.88rem] text-muted-foreground no-underline mt-8 justify-center tracking-[0.05em] transition-colors hover:text-primary reveal reveal-delay-3">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                        </svg>
-                        (734) 838-4685
-                    </a>
                 </div>
             </section>
         </main>
