@@ -317,6 +317,15 @@
         .max-w-\[640px\]  { max-width: 640px !important;  margin-left: auto !important; margin-right: auto !important; }
         .max-w-\[600px\]  { max-width: 600px !important;  margin-left: auto !important; margin-right: auto !important; }
         .max-w-\[580px\]  { max-width: 580px !important;  margin-left: auto !important; margin-right: auto !important; }
+
+        /* Smooth Anchor Scroll & Fixed Nav Offset */
+        html {
+            scroll-behavior: smooth;
+        }
+        section[id],
+        div[id="book"] {
+            scroll-margin-top: 85px;
+        }
     </style>
 
 </head>
@@ -449,7 +458,7 @@
             <div class="section-divider"></div>
 
             <!-- "Why Botox" Section -->
-            <section class="py-[100px] px-[5%] grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center max-w-[1200px] mx-auto">
+            <section id="why-botox" class="py-[100px] px-[5%] grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center max-w-[1200px] mx-auto">
                 <div class="why-left">
                     <p class="text-[0.72rem] tracking-[0.28em] uppercase text-primary mb-5 reveal">Why Botox</p>
                     <h2 class="text-[clamp(2.2rem,4vw,3.4rem)] font-light leading-[1.15] text-foreground mb-7 reveal reveal-delay-1">
@@ -527,7 +536,7 @@
             <div class="section-divider"></div>
 
             <!-- "Client Love" Section -->
-            <section class="py-[100px] px-[5%] bg-background overflow-hidden relative">
+            <section id="testimonials" class="py-[100px] px-[5%] bg-background overflow-hidden relative">
                 <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(201,169,110,0.05)_0%,transparent_50%)] pointer-events-none"></div>
                 <div class="max-w-[1200px] mx-auto relative">
                     <div class="text-center mb-16">
@@ -762,7 +771,7 @@
             <div class="section-divider"></div>
 
             <!-- "A Look Inside Our Office" Section -->
-            <section class="py-[100px] px-[5%] bg-background">
+            <section id="our-space" class="py-[100px] px-[5%] bg-background">
                 <div class="max-w-[1200px] mx-auto text-center mb-12">
                     <p class="text-[0.72rem] tracking-[0.28em] uppercase text-primary mb-4 reveal">Our Space</p>
                     <h2 class="text-[clamp(2rem,4vw,3.2rem)] font-light text-foreground leading-[1.2] reveal reveal-delay-1">A Look Inside Our Office</h2>
@@ -825,7 +834,7 @@
             </section>
 
             <!-- Highlights Section -->
-            <section class="bg-card py-[60px] px-[5%] border-y border-primary/10">
+            <section id="benefits" class="bg-card py-[60px] px-[5%] border-y border-primary/10">
                 <div class="max-w-[1000px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
                     <!-- Detail 1 -->
                     <div class="reveal">
@@ -875,6 +884,113 @@
                     </div>
                 </div>
             </section>
+
+            <div class="section-divider"></div>
+
+            <!-- "FAQ" Section -->
+            <section id="faq" class="py-[120px] px-[5%] relative overflow-hidden bg-card/20">
+                <div class="max-w-[680px] mx-auto relative z-10">
+                    <div class="text-center mb-16">
+                        <p class="text-[0.75rem] tracking-[0.28em] uppercase text-primary mb-3 font-semibold reveal">Common Questions</p>
+                        <h2 class="text-[clamp(2rem,4vw,3.2rem)] font-light text-foreground leading-[1.2] reveal reveal-delay-1">Botox FAQs</h2>
+                        <p class="text-[1.1rem] text-[#bdae98] mt-4 reveal reveal-delay-2 max-w-[600px] mx-auto">Everything you need to know about our physician-supervised wrinkle relaxing treatments in Wyandotte, MI.</p>
+                    </div>
+
+                    <div class="faq-list">
+                        <!-- FAQ 1 -->
+                        <div class="faq-item reveal">
+                            <button type="button" class="faq-toggle">
+                                <span>How long does Botox typically last?</span>
+                                <span class="faq-icon">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                            </button>
+                            <div class="faq-content hidden">
+                                <p class="faq-answer-text">
+                                    Botox results typically last between 3 to 4 months. Over time, dynamic muscle action gradually returns and lines begin to reappear, at which point a maintenance touch-up is recommended. With regular scheduled sessions, your facial muscles become trained to relax, often extending the duration of your results.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="faq-item reveal reveal-delay-1">
+                            <button type="button" class="faq-toggle">
+                                <span>Does receiving Botox injections hurt?</span>
+                                <span class="faq-icon">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                            </button>
+                            <div class="faq-content hidden">
+                                <p class="faq-answer-text">
+                                    Discomfort is minimal and brief. We use ultrafine medical-grade needles, and the sensation is often described as a minor pinch lasting just a few seconds. The entire appointment takes only 15 to 20 minutes, and most clients return directly to their normal schedule.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="faq-item reveal reveal-delay-2">
+                            <button type="button" class="faq-toggle">
+                                <span>Will my face look frozen or unnatural?</span>
+                                <span class="faq-icon">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                            </button>
+                            <div class="faq-content hidden">
+                                <p class="faq-answer-text">
+                                    Never at Skinsational Aesthetics. Our licensed injectors specialize in conservative dosing and precise muscle placement. Our goal is to soften unwanted age lines while fully preserving your natural facial expressions so you look well-rested and refreshed—never frozen or overdone.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="faq-item reveal reveal-delay-3">
+                            <button type="button" class="faq-toggle">
+                                <span>How quickly will I see results after my appointment?</span>
+                                <span class="faq-icon">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                            </button>
+                            <div class="faq-content hidden">
+                                <p class="faq-answer-text">
+                                    You will begin seeing noticeable smoothing within 3 to 5 days following your injection session. Full, optimal results develop by days 10 to 14 as the neurotoxin fully settles into the targeted muscle receptors.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="faq-item reveal reveal-delay-4">
+                            <button type="button" class="faq-toggle">
+                                <span>What is the difference between Botox and Dermal Fillers?</span>
+                                <span class="faq-icon">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                            </button>
+                            <div class="faq-content hidden">
+                                <p class="faq-answer-text">
+                                    Botox is a neurotoxin that relaxes underlying muscles to soften dynamic expression wrinkles (like forehead creases, elevens, and crow's feet). Dermal fillers are hyaluronic acid gels used to restore volume, contour features, and fill deeper folds (such as cheeks, smile lines, and lips). Often, both are paired together for total facial rejuvenation.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 6 -->
+                        <div class="faq-item reveal reveal-delay-5">
+                            <button type="button" class="faq-toggle">
+                                <span>What is the recovery time and aftercare?</span>
+                                <span class="faq-icon">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                            </button>
+                            <div class="faq-content hidden">
+                                <p class="faq-answer-text">
+                                    There is zero downtime required; you can resume your day immediately. We simply advise remaining upright for at least 4 hours post-treatment, avoiding touching or massaging the treated areas, and postponing vigorous workouts or saunas for 24 hours.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
 
             <!-- Bottom CTA Consultation Banner -->
             <section class="py-[90px] px-[5%] text-center relative overflow-hidden bg-card/60 border-t border-primary/15">
