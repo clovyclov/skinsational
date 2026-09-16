@@ -185,3 +185,132 @@
     line-height: 1.85 !important;
     font-family: Jost, sans-serif !important;
 }
+
+
+/* ==========================================================================
+   Antigravity Utility Polyfills for Static Tailwind Bundle
+   ========================================================================== */
+
+/* Section Vertical Padding */
+.py-\[120px\] { padding-top: 110px !important; padding-bottom: 110px !important; }
+.py-\[100px\] { padding-top: 100px !important; padding-bottom: 100px !important; }
+.py-\[90px\]  { padding-top: 90px !important;  padding-bottom: 90px !important; }
+.py-\[80px\]  { padding-top: 80px !important;  padding-bottom: 80px !important; }
+.py-\[70px\]  { padding-top: 70px !important;  padding-bottom: 70px !important; }
+.py-\[60px\]  { padding-top: 60px !important;  padding-bottom: 60px !important; }
+
+@media (max-width: 768px) {
+  .py-\[120px\], .py-\[100px\], .py-\[90px\] { padding-top: 64px !important; padding-bottom: 64px !important; }
+  .py-\[80px\], .py-\[70px\], .py-\[60px\] { padding-top: 48px !important; padding-bottom: 48px !important; }
+}
+
+/* Horizontal Padding */
+.px-\[5\%\] { padding-left: 5% !important; padding-right: 5% !important; }
+
+/* Container Widths & Centering */
+.max-w-\[1400px\] { max-width: 1400px !important; margin-left: auto !important; margin-right: auto !important; }
+.max-w-\[1200px\] { max-width: 1200px !important; margin-left: auto !important; margin-right: auto !important; }
+.max-w-\[1100px\] { max-width: 1100px !important; margin-left: auto !important; margin-right: auto !important; }
+.max-w-\[1000px\] { max-width: 1000px !important; margin-left: auto !important; margin-right: auto !important; }
+.max-w-\[900px\]  { max-width: 900px !important;  margin-left: auto !important; margin-right: auto !important; }
+.max-w-\[860px\]  { max-width: 860px !important;  margin-left: auto !important; margin-right: auto !important; }
+.max-w-\[800px\]  { max-width: 800px !important;  margin-left: auto !important; margin-right: auto !important; }
+.max-w-\[700px\]  { max-width: 700px !important;  margin-left: auto !important; margin-right: auto !important; }
+.max-w-\[680px\]  { max-width: 760px !important;  margin-left: auto !important; margin-right: auto !important; }
+.max-w-\[640px\]  { max-width: 640px !important;  margin-left: auto !important; margin-right: auto !important; }
+.max-w-\[600px\]  { max-width: 600px !important;  margin-left: auto !important; margin-right: auto !important; }
+.max-w-\[580px\]  { max-width: 580px !important;  margin-left: auto !important; margin-right: auto !important; }
+.max-w-\[540px\]  { max-width: 540px !important;  margin-left: auto !important; margin-right: auto !important; }
+.max-w-\[500px\]  { max-width: 500px !important;  margin-left: auto !important; margin-right: auto !important; }
+
+/* Fluid Section Headings */
+.text-\[clamp\(2\.4rem\,5vw\,3\.8rem\)\] {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem) !important;
+  line-height: 1.15 !important;
+}
+.text-\[clamp\(2\.4rem\,5vw\,3\.5rem\)\] {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem) !important;
+  line-height: 1.15 !important;
+}
+.text-\[clamp\(2\.5rem\,5vw\,3\.5rem\)\] {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem) !important;
+  line-height: 1.15 !important;
+}
+.text-\[clamp\(2\.2rem\,4vw\,3\.4rem\)\] {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(2.1rem, 4vw, 3.2rem) !important;
+  line-height: 1.15 !important;
+}
+.text-\[clamp\(2\.2rem\,4vw\,3\.2rem\)\] {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(2rem, 4vw, 3.2rem) !important;
+  line-height: 1.15 !important;
+}
+.text-\[clamp\(2rem\,4vw\,3\.2rem\)\] {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(1.9rem, 3.8vw, 3rem) !important;
+  line-height: 1.2 !important;
+}
+.text-\[clamp\(2rem\,3\.5vw\,2\.8rem\)\] {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(1.8rem, 3.5vw, 2.7rem) !important;
+  line-height: 1.2 !important;
+}
+.text-\[clamp\(3\.2rem\,7vw\,6rem\)\] {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(2.8rem, 6.5vw, 5.5rem) !important;
+  line-height: 1.05 !important;
+}
+
+/* Common font sizes */
+.text-\[1\.6rem\] { font-size: 1.6rem !important; }
+.text-\[1\.5rem\] { font-size: 1.5rem !important; }
+.text-\[1\.45rem\] { font-size: 1.45rem !important; }
+.text-\[1\.4rem\] { font-size: 1.4rem !important; }
+.text-\[1\.35rem\] { font-size: 1.35rem !important; }
+.text-\[1\.3rem\] { font-size: 1.3rem !important; }
+.text-\[1\.25rem\] { font-size: 1.25rem !important; }
+.text-\[1\.2rem\] { font-size: 1.2rem !important; }
+.text-\[1\.15rem\] { font-size: 1.15rem !important; }
+.text-\[1\.1rem\] { font-size: 1.1rem !important; }
+.text-\[1\.05rem\] { font-size: 1.05rem !important; }
+.text-\[0\.98rem\] { font-size: 0.98rem !important; }
+.text-\[0\.95rem\] { font-size: 0.95rem !important; }
+.text-\[0\.92rem\] { font-size: 0.92rem !important; }
+.text-\[0\.9rem\] { font-size: 0.9rem !important; }
+.text-\[0\.88rem\] { font-size: 0.88rem !important; }
+.text-\[0\.85rem\] { font-size: 0.85rem !important; }
+.text-\[0\.82rem\] { font-size: 0.82rem !important; }
+.text-\[0\.8rem\] { font-size: 0.8rem !important; }
+.text-\[0\.78rem\] { font-size: 0.78rem !important; }
+.text-\[0\.75rem\] { font-size: 0.75rem !important; }
+.text-\[0\.72rem\] { font-size: 0.72rem !important; }
+.text-\[0\.7rem\] { font-size: 0.7rem !important; }
+.text-\[0\.65rem\] { font-size: 0.65rem !important; }
+.text-\[0\.62rem\] { font-size: 0.62rem !important; }
+.text-\[0\.6rem\] { font-size: 0.6rem !important; }
+
+/* Letter Spacing */
+.tracking-\[0\.28em\] { letter-spacing: 0.28em !important; }
+.tracking-\[0\.25em\] { letter-spacing: 0.25em !important; }
+.tracking-\[0\.2em\] { letter-spacing: 0.2em !important; }
+.tracking-\[0\.18em\] { letter-spacing: 0.18em !important; }
+.tracking-\[0\.16em\] { letter-spacing: 0.16em !important; }
+.tracking-\[0\.15em\] { letter-spacing: 0.15em !important; }
+.tracking-\[0\.14em\] { letter-spacing: 0.14em !important; }
+.tracking-\[0\.12em\] { letter-spacing: 0.12em !important; }
+.tracking-\[0\.1em\] { letter-spacing: 0.1em !important; }
+.tracking-\[0\.05em\] { letter-spacing: 0.05em !important; }
+
+/* Line Heights */
+.leading-\[1\.8\] { line-height: 1.8 !important; }
+.leading-\[1\.75\] { line-height: 1.75 !important; }
+.leading-\[1\.7\] { line-height: 1.7 !important; }
+.leading-\[1\.6\] { line-height: 1.6 !important; }
+.leading-\[1\.5\] { line-height: 1.5 !important; }
+.leading-\[1\.2\] { line-height: 1.2 !important; }
+.leading-\[1\.15\] { line-height: 1.15 !important; }
+.leading-\[1\.05\] { line-height: 1.05 !important; }
