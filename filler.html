@@ -349,6 +349,30 @@
             background-color: #ebd9b3 !important;
             transform: translateY(-1px) !important;
         }
+
+        /* Treatment Areas Icon Container */
+        .area-icon-container {
+            width: 48px !important;
+            height: 48px !important;
+            min-width: 48px !important;
+            min-height: 48px !important;
+            max-width: 48px !important;
+            max-height: 48px !important;
+            border-radius: 50% !important;
+            background-color: rgba(201, 169, 110, 0.12) !important;
+            border: 1px solid rgba(201, 169, 110, 0.3) !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            color: #c9a96e !important;
+            margin-bottom: 1.5rem !important;
+        }
+
+        .area-icon-container svg {
+            width: 22px !important;
+            height: 22px !important;
+            stroke: #c9a96e !important;
+        }
     </style>
 </head>
 <body class="min-h-screen bg-background text-foreground font-sans font-light selection:bg-primary/30 selection:text-primary-foreground">
@@ -526,7 +550,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
                         <!-- Area 1: Lip Enhancement -->
                         <div class="bg-card border border-primary/20 rounded-xl p-8 shadow-xl hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 reveal">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6">
+                            <div class="area-icon-container">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"></path><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
                             </div>
                             <h3 class="font-serif text-[1.45rem] text-foreground mb-3 font-normal">Lip Volume & Contour</h3>
@@ -536,7 +560,7 @@
 
                         <!-- Area 2: Cheek Contouring -->
                         <div class="bg-card border border-primary/20 rounded-xl p-8 shadow-xl hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 reveal reveal-delay-1">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6">
+                            <div class="area-icon-container">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                             </div>
                             <h3 class="font-serif text-[1.45rem] text-foreground mb-3 font-normal">Cheek Lift & Midface</h3>
@@ -546,7 +570,7 @@
 
                         <!-- Area 3: Jawline & Chin -->
                         <div class="bg-card border border-primary/20 rounded-xl p-8 shadow-xl hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 reveal reveal-delay-2">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6">
+                            <div class="area-icon-container">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                             </div>
                             <h3 class="font-serif text-[1.45rem] text-foreground mb-3 font-normal">Jawline & Chin Sculpting</h3>
@@ -556,7 +580,7 @@
 
                         <!-- Area 4: Smile Lines -->
                         <div class="bg-card border border-primary/20 rounded-xl p-8 shadow-xl hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 reveal">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6">
+                            <div class="area-icon-container">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M8 15h8"></path></svg>
                             </div>
                             <h3 class="font-serif text-[1.45rem] text-foreground mb-3 font-normal">Nasolabial & Marionettes</h3>
@@ -566,7 +590,7 @@
 
                         <!-- Area 5: Tear Troughs -->
                         <div class="bg-card border border-primary/20 rounded-xl p-8 shadow-xl hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 reveal reveal-delay-1">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6">
+                            <div class="area-icon-container">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
                             </div>
                             <h3 class="font-serif text-[1.45rem] text-foreground mb-3 font-normal">Under-Eye Tear Troughs</h3>
@@ -576,7 +600,7 @@
 
                         <!-- Area 6: Full Facial Balancing -->
                         <div class="bg-card border border-primary/20 rounded-xl p-8 shadow-xl hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 reveal reveal-delay-2">
-                            <div class="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-6">
+                            <div class="area-icon-container">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path></svg>
                             </div>
                             <h3 class="font-serif text-[1.45rem] text-foreground mb-3 font-normal">Full Facial Balancing</h3>
