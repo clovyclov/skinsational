@@ -39,7 +39,26 @@
     
     <!-- Custom Style Overrides (Bypass browser caching of styles.css) -->
     <style>
+        .hero-home {
+            min-height: 100vh !important;
+            position: relative !important;
+            display: flex !important;
+            align-items: center !important;
+            overflow: hidden !important;
+            padding-top: 180px !important;
+            padding-bottom: 80px !important;
+            padding-left: 5% !important;
+            padding-right: 5% !important;
+            box-sizing: border-box !important;
+        }
+        @media (min-width: 640px) {
+            .hero-home {
+                padding-top: 130px !important;
+                padding-bottom: 80px !important;
+            }
+        }
         .hero-title {
+            font-family: 'Cormorant Garamond', Georgia, serif !important;
             font-size: clamp(3rem, 7vw, 5.5rem) !important;
             line-height: 1.05 !important;
             font-weight: 300 !important;
@@ -67,6 +86,127 @@
         .footer-nav-links {
             display: flex !important;
             gap: 1.5rem !important;
+        }
+
+        /* =======================================================
+           Section Padding, Headings & Container Widths
+           ======================================================= */
+        section:not(.hero-home) {
+            padding-top: 100px !important;
+            padding-bottom: 100px !important;
+            padding-left: 5% !important;
+            padding-right: 5% !important;
+            box-sizing: border-box !important;
+        }
+
+        @media (max-width: 768px) {
+            section:not(.hero-home) {
+                padding-top: 60px !important;
+                padding-bottom: 60px !important;
+            }
+        }
+
+        /* Section Headings */
+        section:not(.hero-home) h2 {
+            font-family: 'Cormorant Garamond', Georgia, serif !important;
+            font-size: clamp(2.2rem, 4.5vw, 3.4rem) !important;
+            line-height: 1.15 !important;
+            font-weight: 300 !important;
+            color: #f7f3eb !important;
+            margin-bottom: 1rem !important;
+        }
+
+        /* Highlights Banner Section Padding */
+        section.bg-card.border-y {
+            padding-top: 60px !important;
+            padding-bottom: 60px !important;
+        }
+
+        /* Lead Consultation Form Section Padding */
+        #book {
+            padding-top: 100px !important;
+            padding-bottom: 100px !important;
+        }
+        @media (max-width: 768px) {
+            #book {
+                padding-top: 60px !important;
+                padding-bottom: 60px !important;
+            }
+        }
+
+        /* Lead Assessment Form Styling */
+        #assessment-form input,
+        #assessment-form select {
+            height: 48px !important;
+            background-color: #120f0c !important;
+            border: 1px solid rgba(201, 169, 110, 0.25) !important;
+            border-radius: 6px !important;
+            padding: 0 14px !important;
+            color: #f5eedc !important;
+            font-family: 'Jost', sans-serif !important;
+            font-size: 0.95rem !important;
+            outline: none !important;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+            box-sizing: border-box !important;
+        }
+
+        #assessment-form input:focus,
+        #assessment-form select:focus {
+            border-color: #c9a96e !important;
+            box-shadow: 0 0 0 2px rgba(201, 169, 110, 0.25) !important;
+        }
+
+        #assessment-form label {
+            color: #f5eedc !important;
+            font-size: 0.95rem !important;
+            font-weight: 500 !important;
+            margin-bottom: 6px !important;
+        }
+
+        #assessment-form .form-submit-btn {
+            height: 52px !important;
+            background-color: #c9a96e !important;
+            color: #120f0c !important;
+            font-family: 'Jost', sans-serif !important;
+            font-size: 0.85rem !important;
+            font-weight: 600 !important;
+            letter-spacing: 0.12em !important;
+            text-transform: uppercase !important;
+            border-radius: 6px !important;
+            transition: background-color 0.2s ease, transform 0.2s ease !important;
+        }
+
+        #assessment-form .form-submit-btn:hover {
+            background-color: #ebd9b3 !important;
+            transform: translateY(-1px) !important;
+        }
+
+        /* Footer Padding */
+        footer {
+            padding-top: 64px !important;
+            padding-bottom: 48px !important;
+            padding-left: 5% !important;
+            padding-right: 5% !important;
+            box-sizing: border-box !important;
+        }
+
+        /* Container Max-Width Constraints */
+        .max-w-\[1400px\] { max-width: 1400px !important; margin-left: auto !important; margin-right: auto !important; }
+        .max-w-\[1200px\] { max-width: 1200px !important; margin-left: auto !important; margin-right: auto !important; }
+        .max-w-\[1000px\] { max-width: 1000px !important; margin-left: auto !important; margin-right: auto !important; }
+        .max-w-\[800px\]  { max-width: 800px !important;  margin-left: auto !important; margin-right: auto !important; }
+        .max-w-\[700px\]  { max-width: 700px !important;  margin-left: auto !important; margin-right: auto !important; }
+        .max-w-\[640px\]  { max-width: 640px !important;  margin-left: auto !important; margin-right: auto !important; }
+        .max-w-\[600px\]  { max-width: 600px !important;  margin-left: auto !important; margin-right: auto !important; }
+        .max-w-\[580px\]  { max-width: 580px !important;  margin-left: auto !important; margin-right: auto !important; }
+
+        /* Smooth Anchor Scroll & Fixed Nav Offset */
+        html {
+            scroll-behavior: smooth;
+        }
+        section[id],
+        div[id="book"] {
+            scroll-margin-top: 85px;
         }
     </style>
 </head>
@@ -96,7 +236,7 @@
         <!-- Main Content Area -->
         <main class="flex-grow">
             <!-- Hero Section -->
-            <section class="min-h-screen relative flex items-center overflow-hidden px-[5%] pt-[180px] sm:pt-[120px] pb-[80px]">
+            <section class="hero-home min-h-screen relative flex items-center overflow-hidden px-[5%] pt-[180px] sm:pt-[120px] pb-[80px]">
                 <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
                     <source src="https://skinsationalwellness.com/wp-content/uploads/2024/03/skinful-home-video-sm.mp4" type="video/mp4">
                 </video>
@@ -146,8 +286,9 @@
             <div class="section-divider"></div>
 
             <!-- "Ageless Beauty" Section -->
-            <section class="py-[100px] px-[5%] max-w-[1200px] mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center mb-16">
+            <section class="py-[100px] px-[5%]">
+                <div class="max-w-[1200px] mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center mb-16">
                     <div>
                         <p class="text-[0.72rem] tracking-[0.28em] uppercase text-primary mb-5 reveal">Revive Your Radiance</p>
                         <h2 class="text-[clamp(2.2rem,4vw,3.4rem)] font-light leading-[1.15] text-foreground mb-7 reveal reveal-delay-1">
@@ -204,7 +345,8 @@
                         <img src="https://skinsationalwellness.com/wp-content/uploads/2023/12/Dino-Lite-Logo-Gray-300x97.png" alt="Dino-Lite" class="brand-logo-img">
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
             <div class="section-divider"></div>
 
