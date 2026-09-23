@@ -585,10 +585,44 @@
                 </div>
 
                 <div class="reveal reveal-delay-1 flex flex-col gap-8 why-right">
-                    <!-- Featured Treatment Image -->
-                    <div class="relative overflow-hidden rounded-md border border-primary/20 shadow-2xl group cursor-pointer" data-lightbox-trigger data-gallery="fillers" src="assets/filler/filler-treatment.webp">
-                        <img src="assets/filler/filler-treatment.webp" alt="Skinsational Aesthetics Dermal Filler & Lip Enhancement" class="w-full h-auto max-h-[550px] object-cover transition-all duration-500 group-hover:scale-[1.03] group-hover:brightness-105" loading="lazy" decoding="async">
-                        <div class="absolute bottom-0 left-0 right-0 p-4 md:p-[18px] bg-gradient-to-t from-[#0e0b09d9] to-transparent text-[0.72rem] tracking-[0.18em] uppercase text-accent pointer-events-none">Skinsational Clinical Facial Balancing</div>
+                    <!-- Why before/after Carousel (Shadcn Carousel DOM mapping) -->
+                    <div class="relative w-full" role="region" aria-roledescription="carousel" id="why-carousel">
+                        <div class="overflow-hidden rounded-md border border-primary/20 shadow-2xl">
+                            <div class="flex -ml-4 carousel-track">
+                                <div class="pl-4 min-w-0 shrink-0 grow-0 basis-full carousel-item-custom">
+                                    <div class="relative overflow-hidden aspect-[4/5] cursor-pointer group rounded-sm" data-lightbox-trigger data-gallery="fillers" src="assets/filler/results-facial-balancing.webp">
+                                        <img src="assets/filler/results-facial-balancing.webp" alt="Before and after dermal filler facial balancing" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-[1.04] group-hover:brightness-105" loading="lazy" decoding="async">
+                                        <div class="absolute bottom-0 left-0 right-0 p-4 md:p-[18px] bg-gradient-to-t from-[#0e0b09d9] to-transparent text-[0.72rem] tracking-[0.18em] uppercase text-accent pointer-events-none">Full Facial Balancing (Cheeks • Chin • Jawline)</div>
+                                    </div>
+                                </div>
+                                <div class="pl-4 min-w-0 shrink-0 grow-0 basis-full carousel-item-custom">
+                                    <div class="relative overflow-hidden aspect-[4/5] cursor-pointer group rounded-sm" data-lightbox-trigger data-gallery="fillers" src="assets/filler/results-lip-filler-1.webp">
+                                        <img src="assets/filler/results-lip-filler-1.webp" alt="Before and after lip filler enhancement" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-[1.04] group-hover:brightness-105" loading="lazy" decoding="async">
+                                        <div class="absolute bottom-0 left-0 right-0 p-4 md:p-[18px] bg-gradient-to-t from-[#0e0b09d9] to-transparent text-[0.72rem] tracking-[0.18em] uppercase text-accent pointer-events-none">Lip Volume & Contour Definition</div>
+                                    </div>
+                                </div>
+                                <div class="pl-4 min-w-0 shrink-0 grow-0 basis-full carousel-item-custom">
+                                    <div class="relative overflow-hidden aspect-[4/5] cursor-pointer group rounded-sm" data-lightbox-trigger data-gallery="fillers" src="assets/filler/results-lip-filler-2.webp">
+                                        <img src="assets/filler/results-lip-filler-2.webp" alt="Before and after lip filler profile projection" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-[1.04] group-hover:brightness-105" loading="lazy" decoding="async">
+                                        <div class="absolute bottom-0 left-0 right-0 p-4 md:p-[18px] bg-gradient-to-t from-[#0e0b09d9] to-transparent text-[0.72rem] tracking-[0.18em] uppercase text-accent pointer-events-none">Profile Lip Projection & Symmetry</div>
+                                    </div>
+                                </div>
+                                <div class="pl-4 min-w-0 shrink-0 grow-0 basis-full carousel-item-custom">
+                                    <div class="relative overflow-hidden aspect-[4/5] cursor-pointer group rounded-sm" data-lightbox-trigger data-gallery="fillers" src="assets/filler/results-lip-filler-3.webp">
+                                        <img src="assets/filler/results-lip-filler-3.webp" alt="Before and after subtle lip filler enhancement" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-[1.04] group-hover:brightness-105" loading="lazy" decoding="async">
+                                        <div class="absolute bottom-0 left-0 right-0 p-4 md:p-[18px] bg-gradient-to-t from-[#0e0b09d9] to-transparent text-[0.72rem] tracking-[0.18em] uppercase text-accent pointer-events-none">Natural Lip Hydration & Shape</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center gap-4 mt-6">
+                            <button class="static translate-y-0 translate-x-0 h-10 w-10 border border-primary/20 text-foreground hover:bg-primary/10 hover:text-primary rounded-full flex items-center justify-center carousel-prev" aria-label="Previous Slide">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            </button>
+                            <button class="static translate-y-0 translate-x-0 h-10 w-10 border border-primary/20 text-foreground hover:bg-primary/10 hover:text-primary rounded-full flex items-center justify-center carousel-next" aria-label="Next Slide">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -886,6 +920,30 @@
                 </div>
             </div>
         </footer>
+    </div>
+
+    <!-- Lightbox Modal Container -->
+    <div class="fixed inset-0 bg-[#0a0806f2] z-[999] flex items-center justify-center cursor-pointer lightbox" id="lightbox">
+        <!-- Close Button -->
+        <button class="fixed top-6 right-7 text-foreground opacity-60 hover:opacity-100 transition-opacity lightbox-close-btn z-[1010]" aria-label="Close Lightbox">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        
+        <!-- Previous Image Button -->
+        <button class="fixed left-4 md:left-8 top-1/2 -translate-y-1/2 lightbox-prev-btn z-[1010]" aria-label="Previous Image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+
+        <!-- Enlarged Image -->
+        <img src="" alt="Enlarged result" class="max-w-[90vw] max-h-[90vh] object-contain cursor-default z-[1005]">
+
+        <!-- Next Image Button -->
+        <button class="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 lightbox-next-btn z-[1010]" aria-label="Next Image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
     </div>
 
     <!-- Script to dynamically update footer year -->
