@@ -93,7 +93,8 @@
 
         @media (max-width: 991px) {
             .hero-section-custom {
-                padding: 120px 5% 60px 5% !important;
+                padding: 150px 5% 60px 5% !important;
+                align-items: flex-start !important;
             }
             .hero-wrapper {
                 max-width: 540px !important;
@@ -104,6 +105,13 @@
             }
             .hero-right {
                 width: 100% !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-section-custom {
+                padding: 175px 5% 60px 5% !important;
+                align-items: flex-start !important;
             }
         }
 
@@ -335,7 +343,7 @@
 
     <div class="min-h-screen flex flex-col">
         <!-- Navigation Header -->
-        <nav class="fixed top-0 left-0 right-0 z-50 px-[5%] py-4 sm:py-5 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0 bg-gradient-to-b from-background/95 to-transparent backdrop-blur-[2px]">
+        <nav class="fixed top-0 left-0 right-0 z-50 px-[5%] py-3 sm:py-5 flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-0 bg-gradient-to-b from-background/95 to-transparent backdrop-blur-[2px]">
             <div class="flex flex-col items-center sm:items-start">
                 <img src="assets/botox/logo.webp" alt="Skinsational Aesthetics Logo" class="h-9 sm:h-10 w-auto object-contain">
                 <div class="text-[0.6rem] sm:text-[0.65rem] text-muted-foreground tracking-[0.1em] uppercase mt-1 font-medium">Located in Wyandotte, MI</div>
